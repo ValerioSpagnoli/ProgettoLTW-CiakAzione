@@ -7,31 +7,31 @@
 
 
 .body{
-    background-color: rgb(255, 255, 255);
-}
-
-
-.container{
-    display: grid;
-    place-items: center;
+    background-color: rgba(237, 201, 24, 0.475);
+    display: grid;   
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: aqua;
+    grid-template-rows: 0.5fr 1fr 3fr;
 }
 
+.grid-item-navbar{
+    width: 100%;
+    margin: 0;
+}
 
 .grid-item{
-    background-color: blue;
-    border: solid 3px;
-    width: 100%;
+    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 .btn-areapersonale{
-    border: solid 3px rgba(180, 161, 17, 0.628);
+    border: solid 2px rgba(0, 0, 0, 0.727);
     border-radius: 10px;
-    background-color: rgba(255, 238, 80, 0.82);
+    background-color: rgba(237, 201, 24, 0.743);
     font-family: 'Vollkorn', serif;
     font-size: medium;
 }
@@ -40,4 +40,5 @@
     font-family: 'Vollkorn', serif;
     font-size: medium;
 }
+
 
