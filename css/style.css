@@ -1,0 +1,43 @@
+/*Font Titolo*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/*Font generico*/
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+
+
+.body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: aqua;
+}
+
+
+.grid-item{
+    background-color: blue;
+    border: solid 3px;
+    width: 100%;
+}
+
+.btn-areapersonale{
+    border: solid 3px rgba(180, 161, 17, 0.628);
+    border-radius: 10px;
+    background-color: rgba(255, 238, 80, 0.82);
+    font-family: 'Vollkorn', serif;
+    font-size: medium;
+}
+
+.btn-navbar{
+    font-family: 'Vollkorn', serif;
+    font-size: medium;
+}
+
