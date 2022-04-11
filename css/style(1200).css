@@ -59,7 +59,7 @@
     box-shadow: 0.05em 0.05em;
 }
 
-
+/*Sezione offerte*/
 .offerte{
     display: grid;
     grid-template: 
@@ -68,13 +68,14 @@
     width: 100%;
     height: 100%;
     margin-top: 70px;
-    text-align: center;
     border: solid 3px;
 }
 
 .titolo-offerte{
     grid-area: a;
     background-color: #64b0e6cf;
+    font-family: 'Vollkorn', serif;
+    font-size: 50px;
     /* border: solid 3px; */
 }
 
