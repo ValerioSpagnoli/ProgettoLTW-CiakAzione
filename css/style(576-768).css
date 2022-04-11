@@ -5,11 +5,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
 
-.titolo{
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 40px;
+.body{
+    grid-template-rows: 1fr 120px auto 120px; 
 }
 
 
+/*titolo della pagina*/
+.titolo{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 70px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 
 
+/*carosello in 5:3*/
+.carosello{
+    width: 500px;
+    height: 300px;
+}
+
+
+/*Bottoni della navbar*/
+.btn-navbar{
+    font-family: 'Vollkorn', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/*Bottone area personale nella navbar*/
+.btn-areapersonale {
+    background-color: rgba(253, 234, 170, 0.916);
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Vollkorn', serif;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+   }
+   
+.btn-areapersonale:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+   
+.btn-areapersonale:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}

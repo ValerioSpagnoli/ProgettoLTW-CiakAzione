@@ -7,38 +7,33 @@
 
 
 .body{
-    background-color: rgba(237, 201, 24, 0.475);
+    background-color: rgba(253, 233, 170, 0.651);
     display: grid;   
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 100px 700px;
+    grid-template-rows: 1fr 100px 500px;
 }
+
 
 .grid-item-navbar{
     width: 100%;
     margin: 0;
 }
 
+
 .grid-item{
-    border: solid 2px;
+    /* border: solid 2px; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
 }
 
-.btn-areapersonale{
-    border: solid 2px rgba(0, 0, 0, 0.727);
-    border-radius: 10px;
-    background-color: rgba(237, 201, 24, 0.743);
-    font-family: 'Vollkorn', serif;
-    font-size: medium;
-}
 
-.btn-navbar{
-    font-family: 'Vollkorn', serif;
-    font-size: medium;
-}
+
+
+
+
 
 
