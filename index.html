@@ -147,11 +147,19 @@
       </div>
 
       <div class="offerta-1">
-        <img src="./image/offerte/offerte-bar.jpeg" alt="" width="70%" height="70%">
+        <picture style="margin:10px">
+          <source media="(max-width: 768px)" srcset="./image/offerte/offerte-bar-300px.jpeg">
+          <source media="(min-width:769px )" srcset="./image/offerte/offerte-bar.jpeg">
+          <img src="./image/offerte/offerte-bar.jpeg" alt="" style="max-width:100%"/>
+        </picture>
       </div>
 
       <div class="offerta-2">
-        <img src="./image/offerte/offerte-card.jpg" alt="" width="70%" height="70%">
+        <picture style="margin:10px">
+          <source media="(max-width: 768px)" srcset="./image/offerte/offerte-card-300px.jpg">
+          <source media="(min-width:769px )" srcset="./image/offerte/offerte-card.jpg">
+          <img src="./image/offerte/offerte-card.jpeg" alt="" style="max-width:100%"/>
+        </picture>
       </div>
 
     </div>
