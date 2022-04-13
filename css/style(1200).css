@@ -7,7 +7,7 @@
 
 
 .body{
-    grid-template-rows: 1fr 150px auto 700px;
+    grid-template-rows: 1fr 150px auto 500px;
 }
 
 
@@ -23,8 +23,8 @@
 
 /*carosello in 5:3*/
 .carosello{
-    width: 1000px;
-    height: 600px;
+    width: 1250px;
+    height: 670px;
 }
 
 
