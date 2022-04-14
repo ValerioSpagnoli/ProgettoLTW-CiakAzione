@@ -49,3 +49,26 @@
     justify-content: center;
 }
 /*Sezione offerte*/
+
+
+/*Sezione contatti*/
+.storia{
+    grid-area: b;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    margin: 4%;
+    padding: 4%;
+    background-color: rgba(207, 190, 137, 0.651);
+    border-radius: 15px;
+}
+
+.contatti{
+    grid-area: c;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    margin: 4%;
+    padding: 4%;
+    background-color: rgba(207, 190, 137, 0.651);
+    border-radius: 15px;
+}
+/*Sezione contatti*/
