@@ -27,7 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 10px; */
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 /*Sezione offerte*/
@@ -47,25 +48,5 @@
     width: 100%;
     height: 100%;
     justify-content: space-around;
-}
-
-.storia{
-    grid-area: b;
-    font-family: 'Vollkorn', serif;
-    font-size: 20px;
-    margin: 4%;
-    padding: 4%;
-    background-color: rgba(207, 190, 137, 0.651);
-    border-radius: 15px;
-}
-
-.contatti{
-    grid-area: c;
-    font-family: 'Vollkorn', serif;
-    font-size: 20px;
-    margin: 4%;
-    padding: 4%;
-    background-color: rgba(207, 190, 137, 0.651);
-    border-radius: 15px;
 }
 /*Sezione chi-siamo*/
