@@ -6,7 +6,7 @@
 
 
 .body{
-    grid-template-rows: 1fr 120px auto 300px; 
+    grid-template-rows: 1fr 120px auto auto auto; 
 }
 
 
@@ -58,6 +58,8 @@
     box-shadow: 0.05em 0.05em;
 }
 /*Sezione offerte*/
+
+/*Sezione offerte*/
 .titolo-offerte{
     grid-area: a;
     background-color: #64b0e6cf;
@@ -66,13 +68,34 @@
     padding-left: 5%;
 }
 
-/*Sezione offerte*/
 .offerte{
     display: grid;
     grid-template: 
-        'a a' 0.2fr
+        'a a' 50px
         'b b' / 1fr 1fr;
     width: 100%;
     height: 100%;
     margin-top: 70px;
 }
+/*Sezione offerte*/
+
+
+/*Sezione chi-siamo*/
+.titolo-chi-siamo{
+    grid-area: a;
+    background-color: #64b0e6cf;
+    font-family: 'Vollkorn', serif;
+    font-size: 38px;
+    padding-left: 5%;
+}
+
+.chi-siamo{
+    display: grid;
+    grid-template: 
+        'a a' 50px
+        'b c' auto/ 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+/*Sezione chi-siamo*/
