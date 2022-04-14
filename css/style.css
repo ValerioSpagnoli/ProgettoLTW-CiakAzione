@@ -31,22 +31,21 @@
     margin-bottom: 3%;
 }
 
+
 /*Sezione offerte*/
-.bottoni-offerta{
-    display: flex;
+.btn-offerta1{
     grid-area: b;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    display: flex;
+    margin: 4%;
+    border-radius: 15px;
+    justify-content: center;
 }
 
-
-/*Sezione chi-siamo*/
-.card-chi-siamo{
+.btn-offerta2{
+    grid-area: c;
     display: flex;
-    grid-area: b;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    margin: 4%;
+    border-radius: 15px;
+    justify-content: center;
 }
-/*Sezione chi-siamo*/
+/*Sezione offerte*/

@@ -72,11 +72,10 @@
 .offerte{
     display: grid;
     grid-template: 
-        'a a' 60px
-        'b b' / 1fr 1fr;
+        'a a' auto
+        'b c' / 1fr 1fr;
     width: 100%;
     height: 100%;
-    /* margin-top: 70px; */
 }
 /*Sezione offerte*/
 
@@ -93,7 +92,7 @@
 .chi-siamo{
     display: grid;
     grid-template: 
-        'a a' 60px
+        'a a' auto
         'b c' auto/ 1fr 1fr;
     width: 100%;
     height: 100%;
