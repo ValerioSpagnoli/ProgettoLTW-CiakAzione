@@ -5,13 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
 .body{
-    grid-template-rows: 1fr 110px auto auto; 
+    grid-template-rows: 1fr 115px auto auto; 
 }
 
-/* Programmazione */
-.programmazione{
+/* titolocinema */
+.inostricinema{
     font-family: 'Luckiest Guy', cursive;
-    font-size: 60px;
+    font-size: 75px;
     width: 100%;
     height: 100%;
     text-align: center;

@@ -5,17 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
 .body{
-    grid-template-rows: 1fr 150px 115px auto auto; 
+    grid-template-rows: 1fr 115px auto auto; 
 }
 
-/*titolo della pagina*/
-.titolo{
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 110px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
 /* Programmazione */
 .programmazione{
     font-family: 'Luckiest Guy', cursive;

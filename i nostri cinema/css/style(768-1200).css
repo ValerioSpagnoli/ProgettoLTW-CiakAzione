@@ -8,8 +8,9 @@
     grid-template-rows: 1fr 110px auto auto; 
 }
 
-/* Programmazione */
-.programmazione{
+
+/* titolocinema */
+.inostricinema{
     font-family: 'Luckiest Guy', cursive;
     font-size: 60px;
     width: 100%;
