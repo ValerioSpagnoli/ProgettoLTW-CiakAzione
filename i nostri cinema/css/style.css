@@ -32,9 +32,24 @@
 
 /* LUOGHI */
 .luoghi{
-    margin: 2%;
+    display:grid;
     border: solid 2px;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+    grid-template: 
+    'a' auto
+    'b' auto
+    'c' auto;
+    width: 100%;
+    height: 100%;
+}
+
+.luogo1{
+    grid-area: a;
+}
+
+.luogo2{
+    grid-area: b;
+}
+
+.luogo3{
+    grid-area: c;
 }
