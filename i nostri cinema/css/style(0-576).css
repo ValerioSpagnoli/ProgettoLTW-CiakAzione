@@ -49,3 +49,53 @@
     box-shadow: 0.05em 0.05em;
 }
 /*Bottone area personale nella navbar*/
+
+/* LUOGHI */
+.luoghi{
+    display:grid;
+    /* border: solid 2px; */
+    grid-template: 
+    'a' auto
+    'd' auto
+    'b' auto
+    'e' auto
+    'c' auto
+    'f' auto;
+    width: 100%;
+    height: 100%;
+}
+
+.luogo1{
+    grid-area: a;
+}
+
+.luogo2{
+    grid-area: b;
+}
+
+.luogo3{
+    grid-area: c;
+}
+
+.descrizione1{
+    grid-area: d;
+    margin: 30px;
+    font-family: 'Vollkorn', serif;
+}
+
+.descrizione2{
+    grid-area: e;
+    margin: 30px;
+    font-family: 'Vollkorn', serif;
+}
+
+.descrizione3{
+    grid-area: f;
+    margin: 30px;
+    font-family: 'Vollkorn', serif;
+}
+
+.via{
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+}
