@@ -24,8 +24,36 @@
     font-weight: 600;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 0.4em;
 }
 
+.btn-navbar:hover{
+    background-color: rgb(156, 101, 0);
+}
+/*Bottoni della navbar*/
+
+
+/*Bottone area personale nella navbar*/
+.btn-areapersonale {
+    background-color: rgba(217, 217, 217, 0.916);
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Vollkorn', serif;
+    border: 3px solid rgb(101, 101, 101);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+   }
+   
+.btn-areapersonale:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+   
+.btn-areapersonale:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+/*Bottone area personale nella navbar*/
 
 /*Bottone area personale nella navbar*/
 .btn-areapersonale {

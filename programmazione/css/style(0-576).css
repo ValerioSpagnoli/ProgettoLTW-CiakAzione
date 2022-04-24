@@ -1,16 +1,23 @@
 /*Font Titolo*/
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 /*Font generico*/
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
 .body{
-    grid-template-rows: 1fr 65px auto auto;
+    grid-template-rows: 1fr auto auto auto;
 }
 
 /* Programmazione */
 .programmazione{
-    font-family: 'Luckiest Guy', cursive;
+    /* font-family: 'RocknRoll One', sans-serif; */
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 800;
     font-size: 35px;
     width: 100%;
     height: 100%;
@@ -24,16 +31,22 @@
     font-weight: 600;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 0.4em;
 }
+
+.btn-navbar:hover{
+    background-color: rgb(156, 101, 0);
+}
+/*Bottoni della navbar*/
 
 
 /*Bottone area personale nella navbar*/
 .btn-areapersonale {
-    background-color: rgba(253, 234, 170, 0.916);
+    background-color: rgba(217, 217, 217, 0.916);
     font-weight: 600;
     font-size: 15px;
     font-family: 'Vollkorn', serif;
-    border: 3px solid black;
+    border: 3px solid rgb(101, 101, 101);
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
    }
