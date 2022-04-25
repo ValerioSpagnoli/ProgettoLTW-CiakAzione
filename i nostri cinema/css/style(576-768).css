@@ -28,6 +28,7 @@
     font-weight: 600;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 0.4em;
 }
 
 .btn-navbar:hover{
