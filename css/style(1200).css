@@ -29,11 +29,16 @@
 }
 
 
-/*carosello in 5:3*/
+/*carosello*/
 .carosello{
     width: 90%;
     height: 100%;
 }
+
+.carousel-inner{
+    border-radius: 20px;
+}
+/*carosello*/
 
 
 /*Bottoni della navbar*/

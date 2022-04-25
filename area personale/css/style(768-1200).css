@@ -5,25 +5,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
+
 /*Font generico*/
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 
+
+
 .body{
-    grid-template-rows: 1fr auto auto auto auto; 
+    grid-template-rows: 1fr auto auto auto auto auto; 
 }
 
-/* titolocinema */
-.inostricinema{
+
+/*titolo della pagina*/
+.login{
     /* font-family: 'RocknRoll One', sans-serif; */
     /* font-family: 'Montserrat Subrayada', sans-serif; */
     font-family: 'Fredericka the Great', cursive;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 60px;
     width: 100%;
     height: 100%;
     text-align: center;
     color: rgb(0, 0, 0);
 }
+
+
+/*carosello*/
+.carosello{
+    width: 90%;
+    height: 100%;
+}
+
+.carousel-inner{
+    border-radius: 15px;
+}
+/*carosello*/
+
 
 /*Bottoni della navbar*/
 .btn-navbar{
@@ -33,7 +50,6 @@
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 0.4em;
-    transition-duration: 0.6s;
 }
 
 .btn-navbar:hover{
@@ -64,67 +80,43 @@
 }
 /*Bottone area personale nella navbar*/
 
-/* LUOGHI */
 
-.luogo{
-    display: grid;
-    grid-template: 
-    'a b' auto
-    'c b' auto/1fr 1.3fr;
-    width: 90%;
-    height: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+/*form-login*/
+.form-login{
+    font-family: 'Vollkorn', serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 3%;
     border-radius: 15px;
     background-color: rgba(155, 155, 155, 0.651);
 }
 
-
-.descrizione{
-    grid-area: b;
-    padding-left: 30px;
-    font-family: 'Vollkorn', serif;
-    font-size: 20px;
+.btn-login{
+    background-color: rgba(217, 217, 217, 0.916);
+    border: none;
+    border-radius: 0.4em;
+    /* border: 3px solid rgb(101, 101, 101); */
+    width: 100%;
+    height: auto;
 }
 
-.img{
-    grid-area: a;
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-}
-
-.btn-container{
-    grid-area: c;
-    display: flex;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    justify-content: center;
-}
-
-.btn{
-    background-color: rgba(0, 0, 0, 0.916);
-    border: solid 3px black;
-    border-radius: 10px;
-    font-family: 'Vollkorn', serif;
-    font-size: 22px;
-    font-weight: 600;
-    max-height: 50px;
-    color: rgb(220, 220, 217);
-}
-
-.btn:hover{
+.btn-login:hover{
     background-color: rgb(156, 101, 0);
+    transition-duration: 0.6s;
     color: rgb(220, 220, 217);
+    border: none;
 }
 
-.via{
-    font-family: 'Vollkorn', serif;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 5px;
+.input{
+    background-color: rgba(217, 217, 217, 0.916);
+    border: solid 1px black;
+    border-radius: 0.4em;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
 }
+
+.input:focus{
+    outline: solid 3px rgb(156, 101, 0);
+}
+/*form-login*/
