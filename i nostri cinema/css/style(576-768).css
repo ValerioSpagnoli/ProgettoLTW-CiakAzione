@@ -30,6 +30,11 @@
     margin-right: 5px;
 }
 
+.btn-navbar:hover{
+    background-color: rgb(156, 101, 0);
+}
+/*Bottoni della navbar*/
+
 
 /*Bottone area personale nella navbar*/
 .btn-areapersonale {
@@ -51,6 +56,8 @@
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
 }
+/*Bottone area personale nella navbar*/
+
 
 /* LUOGHI */
 
