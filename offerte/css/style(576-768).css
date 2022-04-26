@@ -10,7 +10,7 @@
 
 
 .body{
-    grid-template-rows: 1fr 100px auto; 
+    grid-template-rows: 1fr auto auto auto; 
 }
 
 
@@ -73,3 +73,32 @@
     box-shadow: 0.05em 0.05em;
 }
 /*Bottone area personale nella navbar*/
+
+/* OFFERTE */
+.off_bar1{
+    grid-area: b;
+    color: rgb(220, 220, 217);
+    font-family: 'Vollkorn', serif;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px; 
+    margin:3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.off_bar2{
+    grid-area: c;
+    color: rgb(220, 220, 217);
+    font-family: 'Vollkorn', serif;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px;
+    margin-bottom:3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
