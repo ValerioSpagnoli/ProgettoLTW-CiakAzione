@@ -67,8 +67,9 @@
 .schedafilm{
     display: grid;
     grid-template: 
-    'a b' auto
-    'c b' auto;
+    'a a' auto
+    'c b' auto
+    'c d' auto;
     width: 90%;
     height: 100%;
     padding-left: 5%;
@@ -88,6 +89,7 @@
     font-family: 'Vollkorn', serif;
     font-size: 30px;
     font-weight: 600;
+    margin: 2%
 }
 
 /* sezione scheda film */
@@ -95,7 +97,7 @@
     grid-area: b;
     margin: 15px;
     font-family: 'Vollkorn', serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* Sezione locandine film */

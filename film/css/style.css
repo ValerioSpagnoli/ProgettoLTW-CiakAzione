@@ -35,3 +35,53 @@
     justify-content: center;
     align-items: center;
 }
+
+/* sezione orario */
+.titolo-orario{
+    grid-area: d0;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 30px;
+}
+
+.sceltacinema{
+    grid-area: d1;
+    display: flex;
+    margin: 2%;
+    border-radius: 15px;
+    justify-content: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+}
+
+.btn-orario{
+    grid-area: d2;
+    display: flex;
+    flex-flow: wrap; 
+    justify-content: center ;
+    margin: 2%;
+    padding: 2%;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+}
+
+/* sezione orario */
+.orario{
+    grid-area: d;
+    display: grid;
+    grid-template: 
+    'd0' auto
+    'd1' auto
+    'd2' auto;
+    width: 90%;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+
