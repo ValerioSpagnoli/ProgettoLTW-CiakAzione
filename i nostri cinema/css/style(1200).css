@@ -106,19 +106,20 @@
 }
 
 .btn{
-    background-color: rgba(0, 0, 0, 0.916);
-    border: solid 3px black;
+    background-color: rgba(217, 217, 217, 0.916);
+    border: none;
     border-radius: 10px;
     font-family: 'Vollkorn', serif;
     font-size: 22px;
     font-weight: 600;
     max-height: 50px;
-    color: rgb(220, 220, 217);
+    color: black;
 }
 
 .btn:hover{
     background-color: rgb(156, 101, 0);
     color: rgb(220, 220, 217);
+    transition-duration: 0.6s;
 }
 
 .via{

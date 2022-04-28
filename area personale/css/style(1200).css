@@ -16,7 +16,7 @@
 
 
 /*titolo della pagina*/
-.login{
+.titolo{
     /* font-family: 'RocknRoll One', sans-serif; */
     /* font-family: 'Montserrat Subrayada', sans-serif; */
     font-family: 'Fredericka the Great', cursive;
@@ -28,17 +28,6 @@
     color: rgb(0, 0, 0);
 }
 
-
-/*carosello*/
-.carosello{
-    width: 90%;
-    height: 100%;
-}
-
-.carousel-inner{
-    border-radius: 20px;
-}
-/*carosello*/
 
 
 /*Bottoni della navbar*/
@@ -81,8 +70,8 @@
 /*Bottone area personale nella navbar*/
 
 
-/*form-login*/
-.form-login{
+
+.form{
     font-family: 'Vollkorn', serif;
     font-size: 22px;
     font-weight: bold;
@@ -91,7 +80,7 @@
     background-color: rgba(155, 155, 155, 0.651);
 }
 
-.btn-login{
+.btn-form{
     background-color: rgba(217, 217, 217, 0.916);
     border: none;
     border-radius: 0.4em;
@@ -100,7 +89,7 @@
     height: auto;
 }
 
-.btn-login:hover{
+.btn-form:hover{
     background-color: rgb(156, 101, 0);
     transition-duration: 0.6s;
     color: rgb(220, 220, 217);
@@ -119,4 +108,6 @@
 .input:focus{
     outline: solid 3px rgb(156, 101, 0);
 }
-/*form-login*/
+
+
+
