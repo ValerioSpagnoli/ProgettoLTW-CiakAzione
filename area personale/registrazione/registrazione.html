@@ -85,7 +85,7 @@
 
     <div class="form">
 
-        <form action="" name="registrazione" onsubmit="validaRegistrazione()">
+        <form action="../php/validateRegistration.php" method="POST" name="registrazione" onSubmit="validaRegistrazione()">
 
             <table>
                 <tr>
@@ -122,15 +122,6 @@
                 <tr><td><br></td></tr>
 
                 <tr>
-                    <td>Codice Fiscale:</td>
-                </tr>
-                <tr>
-                    <td><input name="codicefiscale" style="width: 100%;" class="input" type="text" required></td>
-                </tr>
-
-                <tr><td><br></td></tr>
-
-                <tr>
                     <td>Email:</td>
                 </tr>
                 <tr>
@@ -149,7 +140,7 @@
                 <tr><td><br></td></tr>
 
                 <tr>
-                    <td style="display: flex; justify-content: center;"><button class="btn-form">Registrati</button></td>
+                    <td style="display: flex; justify-content: center;"><button class="btn-form" name="registrationButton">Registrati</button></td>
                 </tr>
 
                 <tr><td><br></td></tr>

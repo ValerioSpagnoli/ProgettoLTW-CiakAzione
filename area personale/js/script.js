@@ -26,10 +26,6 @@ function validaRegistrazione(){
             return false;
         }
     }
-
-    alert("Registrazione avvenuta con successo!")
-
-
 }
 
 
