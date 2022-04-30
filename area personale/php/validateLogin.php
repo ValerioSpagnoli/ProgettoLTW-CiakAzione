@@ -26,11 +26,20 @@ else {
                     $password = md5($_POST['password']);
                     $query2 = "SELECT * FROM utenti WHERE email = $1 and pswd = $2";
                     $data = pg_query_params($dbconn, $query2, array($email, $password));
+                    
+                    $array = pg_fetch_array($data, null, PGSQL_ASSOC);
 
-                    if (!($line=pg_fetch_array($data, null, PGSQL_ASSOC))) {
+                    $name = $array['nome'];
+                    $surname = $array['cognome'];
+                    $pswd = $array['pswd'];
+
+                    if ($password != $pswd) {
                         echo("Password errata. Clicca <a href=../login/login.html> qui </a> per effettuare il login!");
                     }
                     else {
+                        session_start();
+                        $_SESSION['nome'] = $name;
+                        $_SESSION['cognome'] = $surname;
                         echo("Login avvenuto con successo. Clicca <a href=../../index.html> qui </a> per tornare alla home!");
                     }
                 }
