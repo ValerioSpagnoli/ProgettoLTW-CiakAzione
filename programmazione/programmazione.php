@@ -121,7 +121,7 @@
       <div class="locandine">
 
         <div class="l1" id="sanlorenzo-cerveteri-latina">
-          <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
+          <a href="../film/film.php" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (1).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
               Uncharted

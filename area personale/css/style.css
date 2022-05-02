@@ -35,3 +35,38 @@
 
     
 }
+
+/* Profilo personale */
+.profilo{
+    display: grid;
+    grid-template: 
+    't t'
+    'a b' 
+    'c c';
+    grid-template-columns: 1fr 3fr;
+    font-family: 'Vollkorn', serif;
+    width: 100%;
+    height: 100%;
+}
+
+.foto{
+    grid-area: a;
+}
+
+.dati{
+    grid-area: b;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.azioni{
+    grid-area: c;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.nome{
+    grid-area: t;
+    margin: 20px;
+    font-size: 40px;
+}

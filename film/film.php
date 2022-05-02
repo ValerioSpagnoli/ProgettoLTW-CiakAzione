@@ -107,7 +107,7 @@
     <div class="schedafilm">
 
       <div class="tit-film">
-        UNCHARTED
+        UNCHARTED 
       </div>
 
       <div class="locandine">
@@ -115,17 +115,19 @@
       </div>
 
       <div class="descrizione">
-        Regista: Ruben Fleischer <br>
-        Genere: Azione, Avventura <br>
-        Anno: 2022 <br>
-        Paese: USA <br>
-        Durata: 116 min <br>
-        Data di uscita: 17 febbraio 2022 <br>
-        Distribuzione: Sony Pictures/ Warner Bros. Italia <br> <br>
-        Uncharted è un film di genere azione, avventura del 2022, <br>
-        diretto da Ruben Fleischer, con Tom Holland e Mark Wahlberg. <br>
-        Uscita al cinema il 17 febbraio 2022. Durata 116 minuti. <br>
-        Distribuito da Sony Pictures/ Warner Bros. Italia.
+        Regista : Ruben Fleischer <br>
+        Genere : Azione, Avventura <br>
+        Anno : 2022 <br>
+        Paese : USA <br>
+        Durata : 116 min <br>
+        Data di uscita : 17 febbraio 2022 <br>
+       Distribuzione : Sony Pictures/ Warner Bros. Italia <br> <br>
+        Basato su una delle serie di videogiochi più vendute e acclamate dalla critica,
+        Uncharted presenta al pubblico il giovane e furbo Nathan Drake (Tom Holland)
+        nella sua prima avventura alla ricerca del tesoro con l’arguto partner Victor “Sully” Sullivan (Mark Wahlberg). 
+        In un’epica avventura piena di azione che attraversa il mondo intero, 
+        i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, 
+        inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo.
       </div>
 
       <!-- sezione orario -->
