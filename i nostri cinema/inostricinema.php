@@ -118,7 +118,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieSanLorenzo();">
-          <a href="../programmazione/programmazione.html">Programmazione</a>
+          <a href="../programmazione/programmazione.php">Programmazione</a>
         </button>
       </div>
 
@@ -153,7 +153,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieLatina();">
-          <a href="../programmazione/programmazione.html">Programmazione</a>
+          <a href="../programmazione/programmazione.php">Programmazione</a>
         </button>
       </div>
 
@@ -188,7 +188,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieCerveteri();">
-          <a href="../programmazione/programmazione.html">Programmazione</a>
+          <a href="../programmazione/programmazione.php">Programmazione</a>
         </button>
       </div>
 
