@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -27,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0, 0, 0);">
 
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html" name="top">
+        <a class="navbar-brand" href="../index.php" name="top">
           <img src="../image/logo/logo.png" width="70px" height="70px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -41,36 +45,44 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;"
-                href="../index.html">Home</a>
+              <a class="nav-link" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.php">Home</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;"
-                href="../i nostri cinema/inostricinema.html">I nostri cinema</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../i nostri cinema/inostricinema.php">I nostri cinema</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link active" style="color: rgb(220, 220, 217); padding-left: 10px;"
-                href="../programmazione/programmazione.html">Programmazione</a>
+              <a class="nav-link active" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../programmazione/programmazione.php">Programmazione</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;"
-                href="../offerte/offerte.html">Offerte</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../offerte/offerte.php">Offerte</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;"
-                href="../index.html#chi-siamo">Chi siamo</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.php#chi-siamo">Chi siamo</a>
             </li>
 
           </ul>
 
           <span class="navbar-text">
+
             <div class="btn-areapersonale">
-              <a class="nav-link" href="../area personale/login/login.html">Area Personale</a>
+              
+              <?php
+                if(!isset($_SESSION['nome'])){
+                  echo(" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> "); 
+                }
+                else{
+                  echo(" <a class='nav-link' href='#'> Ciao ");
+                  echo($_SESSION['nome']);
+                  echo("! </a> ");
+                }
+              ?>
+
             </div>
+
           </span>
 
         </div>

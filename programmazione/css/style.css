@@ -42,3 +42,13 @@
     font-family: 'Vollkorn', serif;
     font-size: 25px;
 }
+
+.sceltacinema{
+    grid-area: d1;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+    padding: 2%;
+}

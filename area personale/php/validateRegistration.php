@@ -1,6 +1,6 @@
 <?php
 if (!(isset($_POST['registrationButton']))) {
-    header("Location: ../../index.html");
+    header("Location: ../../index.php");
 }
 else {
     $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
@@ -23,7 +23,7 @@ else {
             $result = pg_query_params($dbconn, $query1, array($email));
 
             if ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-                echo("Sei già registrato con questa email. Clicca <a href=../login/login.html> qui </a> per effettuare il login!");
+                echo("Sei già registrato con questa email. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
             }
 
             else {
@@ -37,10 +37,10 @@ else {
                 $data = pg_query_params($dbconn, $query2, array($nome, $cognome, $datanascita, $email, $password));
 
                 if ($data) {
-                    echo("Registrazione completata. Clicca <a href=../login/login.html> qui </a> per effettuare il login!");
+                    echo("Registrazione completata. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
                 }
                 else{
-                    echo "Errore in fase di registrazione. Clicca <a href=../../index.html> qui </a> per tornare alla home.";
+                    echo "Errore in fase di registrazione. Clicca <a href=../../index.php> qui </a> per tornare alla home.";
                 }
             } 
         }

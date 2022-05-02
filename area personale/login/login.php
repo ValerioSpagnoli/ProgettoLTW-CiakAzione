@@ -27,7 +27,7 @@
   <div class="grid-item-navbar">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0, 0, 0);">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../../index.html" name="top">
+        <a class="navbar-brand" href="../../index.php" name="top">
           <img src="../../image/logo/logo.png" width="70px" height="70px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -40,32 +40,45 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link active" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../index.html">Home</a>
+              <a class="nav-link active" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../index.php">Home</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../i nostri cinema/inostricinema.html">I
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../i nostri cinema/inostricinema.php">I
                 nostri cinema</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../programmazione/programmazione.html">Programmazione</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../programmazione/programmazione.php">Programmazione</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../offerte/offerte.html">Offerte</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../offerte/offerte.php">Offerte</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../index.html#chi-siamo">Chi siamo</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../../index.php#chi-siamo">Chi siamo</a>
             </li>
 
           </ul>
 
           <span class="navbar-text">
+
             <div class="btn-areapersonale">
-              <a class="nav-link" href="#">Area Personale</a>
+              
+              <?php
+                if(!isset($_SESSION['nome'])){
+                  echo(" <a class='nav-link' href='#'>Area Personale</a> "); 
+                }
+                else{
+                  echo(" <a class='nav-link' href='#'> Ciao ");
+                  echo($_SESSION['nome']);
+                  echo("! </a> ");
+                }
+              ?>
+
             </div>
+
           </span>
 
         </div>
@@ -77,7 +90,7 @@
 
   <div class="grid-item">
     <div class="titolo">
-        REGISTRAZIONE
+        LOGIN
       </div>
   </div>
 
@@ -85,81 +98,51 @@
 
     <div class="form">
 
-        <form action="../php/validateRegistration.php" method="POST" name="registrazione" onSubmit="validaRegistrazione()">
+            <form action="../php/validateLogin.php" method="POST" name="login" onsubmit="validaLogin()">
+                <table>
+                    <tr>
+                        <td style="display: flex; justify-content: center; font-size: 25px;">Effettua il login</td>
+                    </tr>
 
-            <table>
-                <tr>
-                    <td style="display: flex; justify-content: center; font-size: 25px;">Effettua la registrazione</td>
-                </tr>
+                    <tr><td><br></td></tr>
 
-                <tr><td><br></td></tr>
+                    <tr>
+                        <td>Email:</td>
+                    </tr>
+                    <tr>
+                        <td><input name="email" style="width: 100%;" class="input" type="email" required></td>
+                    </tr>
 
-                <tr>
-                    <td>Nome:</td>
-                </tr>
-                <tr>
-                    <td><input name="nome" style="width: 100%;" class="input" type="text" maxlength="50" required></td>
-                </tr>
+                    <tr><td><br></td></tr>
 
-                <tr><td><br></td></tr>
+                    <tr>
+                        <td>Password:</td>
+                    </tr>
+                    <tr>
+                        <td><input name="password" style="width: 100%;" class="input" type="password" required></td>
+                    </tr>
 
-                <tr>
-                    <td>Cognome:</td>
-                </tr>
-                <tr>
-                    <td><input name="cognome" style="width: 100%;" class="input" type="text" maxlength="50" required></td>
-                </tr>
+                    <tr><td><br></td></tr>
 
-                <tr><td><br></td></tr>
+                    <tr>
+                        <td style="display: flex; justify-content: center;"><button class="btn-form" name="loginButton">Login</button></td>
+                    </tr>
 
-                <tr>
-                    <td>Data di Nascita:</td>
-                </tr>
-                <tr>
-                    <td><input name="datanascita" style="width: 100%;" class="input" type="date" required></td>
-                </tr>
+                    <tr><td><br></td></tr>
 
-                <tr><td><br></td></tr>
+                    <tr>
+                        <td style="display: flex; justify-content: center;">Non sei registrato? Clicca &nbsp <a href="../registrazione/registrazione.php" style="color: rgb(156, 101, 0);"> qui</a>!</td>
+                    </tr>
+                </table>
+            </form>
 
-                <tr>
-                    <td>Email:</td>
-                </tr>
-                <tr>
-                    <td><input name="email" style="width: 100%;" class="input" type="email" required></td>
-                </tr>
-
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td>Password:</td>
-                </tr>
-                <tr>
-                    <td><input name="password" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required></td>
-                </tr>
-
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td style="display: flex; justify-content: center;"><button class="btn-form" name="registrationButton">Registrati</button></td>
-                </tr>
-
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td style="display: flex; justify-content: center;">Sei già registrato? Clicca &nbsp <a href="../login/login.html" style="color: rgb(156, 101, 0);">qui</a>!</td>
-                </tr>
-            </table>
-
-        </form>
-           
     </div>
 
   </div>
 
 
+
   
-
-
 
  
 
@@ -186,7 +169,7 @@
 
 
 
-  <script src="../js/script.js"></script>
+
 
 
   <!-- Optional JavaScript; choose one of the two! -->

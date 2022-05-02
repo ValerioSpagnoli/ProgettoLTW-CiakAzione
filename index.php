@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -44,16 +48,16 @@
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./i nostri cinema/inostricinema.html">I
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./i nostri cinema/inostricinema.php">I
                 nostri cinema</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./programmazione/programmazione.html">Programmazione</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./programmazione/programmazione.php">Programmazione</a>
             </li>
 
             <li class="nav-item btn-navbar">
-              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./offerte/offerte.html">Offerte</a>
+              <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="./offerte/offerte.php">Offerte</a>
             </li>
 
             <li class="nav-item btn-navbar">
@@ -62,10 +66,24 @@
 
           </ul>
 
+
           <span class="navbar-text">
+
             <div class="btn-areapersonale">
-              <a class="nav-link" href="./area personale/login/login.html">Area Personale</a>
+              
+              <?php
+                if(!isset($_SESSION['nome'])){
+                  echo(" <a class='nav-link' href='./area personale/login/login.php'>Area Personale</a> "); 
+                }
+                else{
+                  echo(" <a class='nav-link' href='#'> Ciao ");
+                  echo($_SESSION['nome']);
+                  echo("! </a> ");
+                }
+              ?>
+
             </div>
+
           </span>
 
         </div>
@@ -73,6 +91,8 @@
     </nav>
 
   </div>
+
+  
 
 
   <!-- TITOLO -->

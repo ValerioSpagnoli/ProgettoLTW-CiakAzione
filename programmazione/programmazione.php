@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -18,16 +22,17 @@
 
   <title>Ciak & Azione</title>
 
+
 </head>
 
-<body class="body">
+<body class="body" onload="leggiCookie();">
 
     <!-- NAVBAR -->
     <div class="grid-item-navbar">
       <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0, 0, 0);">
   
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html" name="top">
+          <a class="navbar-brand" href="../index.php" name="top">
             <img src="../image/logo/logo.png"  width="70px" height="70px" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -40,11 +45,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
   
               <li class="nav-item btn-navbar">
-                <a class="nav-link" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.html">Home</a>
+                <a class="nav-link" aria-current="page" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.php">Home</a>
               </li>
   
               <li class="nav-item btn-navbar">
-                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../i nostri cinema/inostricinema.html">I nostri cinema</a>
+                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../i nostri cinema/inostricinema.php">I nostri cinema</a>
               </li>
   
               <li class="nav-item btn-navbar">
@@ -52,21 +57,34 @@
               </li>
   
               <li class="nav-item btn-navbar">
-                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../offerte/offerte.html">Offerte</a>
+                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../offerte/offerte.php">Offerte</a>
               </li>
   
               <li class="nav-item btn-navbar">
-                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.html#chi-siamo">Chi siamo</a>
+                <a class="nav-link" style="color: rgb(220, 220, 217); padding-left: 10px;" href="../index.php#chi-siamo">Chi siamo</a>
               </li>
   
             </ul>
   
             <span class="navbar-text">
+
               <div class="btn-areapersonale">
-                <a class="nav-link" href="../area personale/login/login.html">Area Personale</a>
+              
+                <?php
+                  if(!isset($_SESSION['nome'])){
+                    echo(" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> "); 
+                  }
+                  else{
+                    echo(" <a class='nav-link' href='#'> Ciao ");
+                    echo($_SESSION['nome']);
+                    echo("! </a> ");
+                  }
+                ?>
+
               </div>
+
             </span>
-  
+
           </div>
         </div>
       </nav>
@@ -82,11 +100,27 @@
   
     </div>
 
+    
+    <!-- SCELTA CINEMA -->
+    <div class="grid-item">
+
+      <div class="sceltacinema">
+        <select id="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;" onchange="filter();">
+          <option value="Tutti i Cinema" selected>Tutti i Cinema</option>
+          <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
+          <option value="Latina">Ciak & Azione Latina</option>
+          <option value="Cerveteri">Ciak & Azione Cerveteri</option>
+        </select>
+      </div>
+
+    </div>
+    
+
     <!-- LOCANDINE -->
     <div class="grid-item">
       <div class="locandine">
 
-        <div class="p-lg-1">
+        <div class="l1" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (1).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -95,7 +129,7 @@
           </a> 
         </div>
 
-        <div class="l2">
+        <div class="l2" id="latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (2).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -103,7 +137,7 @@
             </footer>
           </a> 
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (3).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -111,7 +145,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (4).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -119,7 +153,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (5).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -127,7 +161,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (6).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -135,7 +169,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="cerveteri">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (7).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -143,7 +177,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (8).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -151,7 +185,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (9).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -159,7 +193,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (10).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -167,7 +201,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (11).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -175,7 +209,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (12).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -183,7 +217,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (13).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -191,7 +225,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (14).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -199,7 +233,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (15).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -207,7 +241,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (16).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -215,7 +249,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-cerveteri-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (17).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -223,7 +257,7 @@
             </footer>
           </a>
         </div>
-        <div class="l3">
+        <div class="l3" id="sanlorenzo-latina">
           <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (18).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
@@ -251,7 +285,8 @@
 
 
 
-
+  <script src="./js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->

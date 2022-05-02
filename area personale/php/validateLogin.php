@@ -1,6 +1,6 @@
 <?php
 if (!(isset($_POST['loginButton']))) {
-    header("Location: ../../index.html");
+    header("Location: ../../index.php");
 }
 else {
     $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
@@ -20,7 +20,7 @@ else {
                 $result = pg_query_params($dbconn, $query1, array($email));
 
                 if (!($line = pg_fetch_array($result, null, PGSQL_ASSOC))) {
-                    echo("Non risulti registrato al sito. Clicca <a href=../registrazione/registrazione.html> qui </a> per effettuare la registrazione!");
+                    echo("Non risulti registrato al sito. Clicca <a href=../registrazione/registrazione.php> qui </a> per effettuare la registrazione!");
                 }
                 else {
                     $password = md5($_POST['password']);
@@ -34,13 +34,13 @@ else {
                     $pswd = $array['pswd'];
 
                     if ($password != $pswd) {
-                        echo("Password errata. Clicca <a href=../login/login.html> qui </a> per effettuare il login!");
+                        echo("Password errata. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
                     }
                     else {
                         session_start();
                         $_SESSION['nome'] = $name;
                         $_SESSION['cognome'] = $surname;
-                        echo("Login avvenuto con successo. Clicca <a href=../../index.html> qui </a> per tornare alla home!");
+                        echo("Login avvenuto con successo. Clicca <a href=../../index.php> qui </a> per tornare alla home!");
                     }
                 }
             }
