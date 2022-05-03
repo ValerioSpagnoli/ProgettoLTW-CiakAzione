@@ -75,7 +75,7 @@
                   echo(" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> "); 
                 }
                 else{
-                  echo(" <a class='nav-link' href='./area personale/profilo.php'> Ciao ");
+                  echo(" <a class='nav-link' href='../area personale/profilo.php'> Ciao ");
                   echo($_SESSION['nome']);
                   echo("! </a> ");
                 }
@@ -118,7 +118,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieSanLorenzo();">
-          <a href="../programmazione/programmazione.php">Programmazione</a>
+          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>
 
@@ -153,7 +153,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieLatina();">
-          <a href="../programmazione/programmazione.php">Programmazione</a>
+          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>
 
@@ -188,7 +188,7 @@
 
       <div class="btn-container">
         <button class="btn" onclick="salvaCookieCerveteri();">
-          <a href="../programmazione/programmazione.php">Programmazione</a>
+          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>
 

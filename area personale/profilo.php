@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,9 +106,9 @@
   </div>
 
   <div class="grid-item">
-    <button class="esci" onclick="logout()">Logout
+    <button class="esci" >
+    <a href="./logout.php" style="color:black; text-decoration: none;">Logout</a>
     </button>
-  </div>
 
 </body>
 </html>
