@@ -32,3 +32,12 @@ function validaRegistrazione(){
 function validaLogin(){
     
 }
+
+// function logout(){
+//     if(isset($_SESSION['nome']) ){
+//         unset($_SESSION['nome']);
+//         session_destroy();
+//         header("location: ../index.php");
+//         exit;
+//       }
+// }

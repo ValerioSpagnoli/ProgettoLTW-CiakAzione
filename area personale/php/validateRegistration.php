@@ -37,7 +37,9 @@ else {
                 $data = pg_query_params($dbconn, $query2, array($nome, $cognome, $datanascita, $email, $password));
 
                 if ($data) {
-                    echo("Registrazione completata. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
+                    alert("Registrazione effettuata con successo!");
+                    header('Location: ../login/login.php');
+                    // echo("Registrazione completata. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
                 }
                 else{
                     echo "Errore in fase di registrazione. Clicca <a href=../../index.php> qui </a> per tornare alla home.";

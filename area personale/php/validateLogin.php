@@ -40,7 +40,7 @@ else {
                         session_start();
                         $_SESSION['nome'] = $name;
                         $_SESSION['cognome'] = $surname;
-                        echo("Login avvenuto con successo. Clicca <a href=../../index.php> qui </a> per tornare alla home!");
+                        header('Location: ../profilo.php');
                     }
                 }
             }

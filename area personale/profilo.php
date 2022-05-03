@@ -102,5 +102,10 @@
     </div>
   </div>
 
+  <div class="grid-item">
+    <button class="esci" onclick="logout()">Logout
+    </button>
+  </div>
+
 </body>
 </html>
