@@ -32,6 +32,8 @@ else {
                     $name = $array['nome'];
                     $surname = $array['cognome'];
                     $pswd = $array['pswd'];
+                    $datanascita=$array['datanascita'];
+                    $email=$array['email'];
 
                     if ($password != $pswd) {
                         echo("Password errata. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
@@ -40,6 +42,8 @@ else {
                         session_start();
                         $_SESSION['nome'] = $name;
                         $_SESSION['cognome'] = $surname;
+                        $_SESSION['datanascita'] = $datanascita;
+                        $_SESSION['email'] = $email;
                         header('Location: ../profilo.php');
                     }
                 }

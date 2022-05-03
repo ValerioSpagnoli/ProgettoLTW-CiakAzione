@@ -75,7 +75,7 @@
                   echo(" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> "); 
                 }
                 else{
-                  echo(" <a class='nav-link' href='./area personale/profilo.php'> Ciao ");
+                  echo(" <a class='nav-link' href='../area personale/profilo.php'> Ciao ");
                   echo($_SESSION['nome']);
                   echo("! </a> ");
                 }
@@ -111,7 +111,21 @@
       </div>
 
       <div class="locandine">
-        <img src="../image/locandine/locandina (1).jpg">
+       <div class="rating"> 
+          <input type="radio" name="rating" value="5" id="5">
+            <label for="5">☆</label> 
+          <input type="radio" name="rating" value="4" id="4">
+            <label for="4">☆</label>
+          <input type="radio" name="rating" value="3" id="3">
+            <label for="3">☆</label>
+          <input type="radio" name="rating" value="2" id="2">
+            <label for="2">☆</label>
+          <input type="radio" name="rating" value="1" id="1">
+            <label for="1">☆</label>
+        </div>
+        <div class="img"> 
+           <img src="../image/locandine/locandina (1).jpg">
+        </div>
       </div>
 
       <div class="descrizione">
@@ -129,6 +143,14 @@
         i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, 
         inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo.
       </div>
+
+      <!-- stelline -->
+      <!-- <div class="stelle">
+      <div class="rate bg-success py-3 text-white mt-3">
+                <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+            </div>
+      </div>   -->
 
       <!-- sezione orario -->
       <div class="orario">

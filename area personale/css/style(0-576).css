@@ -67,6 +67,19 @@
 }
 /*Bottone area personale nella navbar*/
 
+/* Profilo personale */
+.profilo{
+    display: grid;
+    grid-template: 
+    't '
+    'a ' 
+    'b '
+    'c' ;
+    font-family: 'Vollkorn', serif;
+    width: 100%;
+    height: 100%;
+}
+
 
 /*form-login*/
 .form{
