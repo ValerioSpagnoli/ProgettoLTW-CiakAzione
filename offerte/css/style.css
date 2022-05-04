@@ -68,3 +68,19 @@
     margin:5%;
     font-size: 17px;
 }
+.btn-prenota{
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+    border-radius: 0.4em;
+    color:black; 
+    text-decoration: none;
+}
+
+.btn-prenota:hover{
+    background-color: rgb(156, 101, 0);
+    color: rgb(220, 220, 217);
+    transition-duration: 0.6s;
+}

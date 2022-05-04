@@ -181,13 +181,13 @@
       </div>
 
       <div class="btn-offerta1">
-        <a href="./offerte/offerte.html#off1">
+        <a href="./offerte/offerte.php#off1">
           <img src="./image/offerte/offerta1.jpeg" alt="" style="max-width:100%; border-radius: 15px;" />
         </a>
       </div>
 
       <div class="btn-offerta2">
-        <a href="./offerte/offerte.html#off2">
+        <a href="./offerte/offerte.php#off2">
           <img src="./image/offerte/offerta2.jpg" alt="" style="max-width:100%; border-radius: 15px;" />
         </a>
       </div>

@@ -9,6 +9,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/vue@3"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -105,9 +106,10 @@
     <!-- sezione scheda-film -->
 
     <div class="schedafilm">
-
       <div class="tit-film">
-        UNCHARTED 
+      <div id="app">
+        <h1>{{title}}</h1>
+      </div>
       </div>
 
       <div class="locandine">
@@ -143,14 +145,6 @@
         i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, 
         inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo.
       </div>
-
-      <!-- stelline -->
-      <!-- <div class="stelle">
-      <div class="rate bg-success py-3 text-white mt-3">
-                <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                </div>
-            </div>
-      </div>   -->
 
       <!-- sezione orario -->
       <div class="orario">
@@ -239,6 +233,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   -->
+  <script type="application/javascript" src="app.js"></script>
 </body>
 
 </html>

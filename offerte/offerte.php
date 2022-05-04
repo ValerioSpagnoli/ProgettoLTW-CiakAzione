@@ -106,7 +106,7 @@
     <a name="#off1"></a>
     <div class="offerta">
       <div class="titolo-off">
-        Biglietto+Bar
+        Promo
       </div>
       <div class="off_bar1">
         <div class="img">
@@ -118,18 +118,16 @@
           Ti piace mangiare mentre guardi i nostri film? 
           Acquistando due biglietti ingresso, avrai a disposizione uno sconto del 20% per l'acquisto di pop corn e bibite 
           da consumarsi al nostro bar, all'ingresso del cinema.
-        </div>
+        </div> 
       </div>
       <div class="off_bar2">
         <div class="img">
           <img src="../image/offerte/offerta1.jpeg" alt="" style="width: 380px; height: 210px;border-radius: 15px;">
         </div>
         <div class="descrizione">
-          Nei nostri cinema Ciak & Azione abbiamo la promozione giusta per ogni cliente! 
-          <br>
-          Ti piace mangiare mentre guardi i nostri film? 
-          Acquistando due biglietti ingresso, avrai a disposizione uno sconto del 20% per l'acquisto di pop corn e bibite 
-          da consumarsi al nostro bar, all'ingresso del cinema.
+        Se sei una mamma o un papà e hai almeno 1 figlio con meno di 14 anni, Ciak & Azione ti consente
+        di avere lo SCONTO FAMILY & FRIENDS tutti i giorni della settimana e per tutti i film sia 2D che 3D!
+        Da minimo 3 a 7 biglietti tutti con lo sconto, 1 o 2 adulti compresi!
         </div>
       </div>
     </div>
@@ -142,14 +140,25 @@
         </div>
         <div class="off_bar1">
           <div class="img">
-            <img src="../image/offerte/offerta2.jpg" alt="" style="width: 380px; height: 210px; border-radius: 15px;">
+            <img src="../image/offerte/offerta2.jpg" alt="" style="width: 380px; height: 210px; border-radius: 15px;" >
           </div>
           <div class="descrizione">
-            Nei nostri cinema Ciak & Azione abbiamo la promozione giusta per ogni cliente! 
+            Ti piace venire spesso ai nostri cinema?
             <br>
-            Ti piace mangiare mentre guardi i nostri film? 
-            Acquistando due biglietti ingresso, avrai a disposizione uno sconto del 20% per l'acquisto di pop corn e bibite 
-            da consumarsi al nostro bar, all'ingresso del cinema.
+            Approfittane e acquista la nostra CARD abbonati che ti permette di acquistare 10 ingressi biglietto 
+            al prezzo di 8 ingressi, avendone così 2 in omaggio. <br>
+            Se sei interessato, effettua l'accesso all'area personale e prenota la tua card che potrà essere poi ritirata nei
+            nostri cinema Ciak & Azione.
+            <div class="btn-prenota" >
+              <?php
+                  if(!isset($_SESSION['nome'])){
+                    echo(" <a class='nav-link' href='../area personale/login/login.php' style='color:black; text-decoration: none;'>Prenota</a> "); 
+                  }
+                  else{
+                    echo(" <a class='nav-link' href='../area personale/profilo.php' style='color:black; text-decoration: none;'> Prenota </a>");
+                  }
+              ?> 
+            </div>
           </div>
         </div>
         <div class="off_bar2">
@@ -157,11 +166,22 @@
             <img src="../image/offerte/offerta2.jpg" alt="" style="width: 380px; height: 210px; border-radius: 15px;">
           </div>
           <div class="descrizione">
-            Nei nostri cinema Ciak & Azione abbiamo la promozione giusta per ogni cliente! 
-            <br>
-            Ti piace mangiare mentre guardi i nostri film? 
-            Acquistando due biglietti ingresso, avrai a disposizione uno sconto del 20% per l'acquisto di pop corn e bibite 
-            da consumarsi al nostro bar, all'ingresso del cinema.
+          Ciak Card è la prima carta fedeltà al cinema che ti fa risparmiare davvero. <br>
+          Che tu sia un genitore, uno studente o solamente appassionato di cinema,
+          per te esiste una Ciak Card speciale con la quale puoi avere sconti in alcuni giorni o fasce orarie.
+          Con la Ciak Card ottieni punti ogni volta che vedi un film o compri un popcorn e converti questi punti 
+          in ingressi scontati o addirittura gratuiti. E i premi non finiscono alla biglietteria ma li trovi anche al bar. 
+          Cosa aspetti a farla?
+          <div class="btn-prenota" >
+              <?php
+                  if(!isset($_SESSION['nome'])){
+                    echo(" <a class='nav-link' href='../area personale/login/login.php' style='color:black; text-decoration: none;'>Prenota</a> "); 
+                  }
+                  else{
+                    echo(" <a class='nav-link' href='../area personale/profilo.php' style='color:black; text-decoration: none;'> Prenota </a>");
+                  }
+              ?> 
+            </div>
           </div>
         </div>
       </div>
