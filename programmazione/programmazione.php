@@ -121,7 +121,7 @@
       <div class="locandine">
 
         <div class="l1" id="sanlorenzo-cerveteri-latina">
-          <a href="../film/film.php" style="color: rgb(156, 101, 0); text-decoration: none;">
+          <a href="../film/film.php#sch-film1" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (1).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
               Uncharted
@@ -130,7 +130,7 @@
         </div>
 
         <div class="l2" id="latina">
-          <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
+          <a href="../film/film.php#sch-film2" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (2).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
               La figlia oscura
@@ -138,7 +138,7 @@
           </a> 
         </div>
         <div class="l3" id="sanlorenzo">
-          <a href="../film/film.html" style="color: rgb(156, 101, 0); text-decoration: none;">
+          <a href="../film/film.php#sch-film3" style="color: rgb(156, 101, 0); text-decoration: none;">
             <img src="../image/locandine/locandina (3).jpg" style="margin:30px" width="80%" height="80%">
             <footer class="footer-locandine">
               Gli idoli delle donne

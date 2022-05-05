@@ -92,119 +92,112 @@
 
   </div>
 
-  <!-- PROGRAMMAZIONE -->
-  <div class="grid-item">
 
-    <div class="programmazione">
-      PROGRAMMAZIONE
-    </div>
+<!-- PARTE VUE -->
+  <div id="app">
+    <li v-for="x in title">
 
-  </div>
+    <!-- SCHEDA FILM -->
 
-  <!-- SCHEDA FILM -->
-  <div class="grid-item">
-    <!-- sezione scheda-film -->
+    <div class="grid-item">
+      <!-- sezione scheda-film -->
 
-    <div class="schedafilm">
-      <div class="tit-film">
-      <div id="app">
-        <h1>{{title}}</h1>
-      </div>
-      </div>
+      <div class="schedafilm">
+      <a v-bind:name="x.riferimento"></a>
+        <div class="tit-film">
+          <h1>{{x.text}}</h1>
+        </div>
 
       <div class="locandine">
-       <div class="rating"> 
-          <input type="radio" name="rating" value="5" id="5">
-            <label for="5">☆</label> 
-          <input type="radio" name="rating" value="4" id="4">
-            <label for="4">☆</label>
-          <input type="radio" name="rating" value="3" id="3">
-            <label for="3">☆</label>
-          <input type="radio" name="rating" value="2" id="2">
-            <label for="2">☆</label>
-          <input type="radio" name="rating" value="1" id="1">
-            <label for="1">☆</label>
+        <div class="rating"> 
+            <input type="radio" name="rating" value="5" id="5">
+              <label for="5">☆</label> 
+            <input type="radio" name="rating" value="4" id="4">
+              <label for="4">☆</label>
+            <input type="radio" name="rating" value="3" id="3">
+              <label for="3">☆</label>
+            <input type="radio" name="rating" value="2" id="2">
+              <label for="2">☆</label>
+            <input type="radio" name="rating" value="1" id="1">
+              <label for="1">☆</label>
+          </div>
+          <div class="img"> 
+            <img v-bind:src="x.image"/>
+          </div>
         </div>
-        <div class="img"> 
-           <img src="../image/locandine/locandina (1).jpg">
+
+        <div class="descrizione">
+          Regista: {{x.Regista}} <br>
+          Genere: {{x.Genere}} <br>
+          Anno: {{x.Anno}}<br>
+          Paese: {{x.Paese}}<br>
+          Durata: {{x.Durata}}<br>
+          Data di uscita: {{x.Data}}<br>
+          Distribuzione: {{x.Distribuzione}}<br><br>
+          Trama: {{x.trama}}
         </div>
+
+        <!-- sezione orario -->
+        <div class="orario">
+
+          <div class="titolo-orario">
+            orario
+          </div>
+
+          <div class="sceltacinema">
+            <select name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
+              <option value="" disabled selected hidden>Scegli il cinema</option>
+              <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
+              <option value="Latina">Ciak & Azione Latina</option>
+              <option value="Cerveteri">Ciak & Azione Cerveteri</option>
+            </select>
+          </div>
+
+          <!-- bottoni-orario -->
+
+          <div class="orario1">
+            <button class="btn" type="submit">
+              17:00
+            </button>
+          </div>
+
+          <div class="orario2">
+            <button class="btn" type="submit">
+              18:00
+            </button>
+          </div>
+
+          <div class="orario3">
+            <button class="btn" type="submit">
+              20:00
+            </button>
+          </div>
+
+          <div class="orario4">
+            <button class="btn" type="submit">
+              22:00
+            </button>
+          </div>
+
+          <!-- bottoni-orario -->
+        </div>
+        <!-- sezione orario -->
       </div>
-
-      <div class="descrizione">
-        Regista : Ruben Fleischer <br>
-        Genere : Azione, Avventura <br>
-        Anno : 2022 <br>
-        Paese : USA <br>
-        Durata : 116 min <br>
-        Data di uscita : 17 febbraio 2022 <br>
-       Distribuzione : Sony Pictures/ Warner Bros. Italia <br> <br>
-        Basato su una delle serie di videogiochi più vendute e acclamate dalla critica,
-        Uncharted presenta al pubblico il giovane e furbo Nathan Drake (Tom Holland)
-        nella sua prima avventura alla ricerca del tesoro con l’arguto partner Victor “Sully” Sullivan (Mark Wahlberg). 
-        In un’epica avventura piena di azione che attraversa il mondo intero, 
-        i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, 
-        inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo.
-      </div>
-
-      <!-- sezione orario -->
-      <div class="orario">
-
-        <div class="titolo-orario">
-          orario
-        </div>
-
-        <div class="sceltacinema">
-          <select name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
-            <option value="" disabled selected hidden>Scegli il cinema</option>
-            <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
-            <option value="Latina">Ciak & Azione Latina</option>
-            <option value="Cerveteri">Ciak & Azione Cerveteri</option>
-          </select>
-        </div>
-
-        <!-- bottoni-orario -->
-
-        <div class="orario1">
-          <button class="btn" type="submit">
-            17:00
-          </button>
-        </div>
-
-        <div class="orario2">
-          <button class="btn" type="submit">
-            18:00
-          </button>
-        </div>
-
-        <div class="orario3">
-          <button class="btn" type="submit">
-            20:00
-          </button>
-        </div>
-
-        <div class="orario4">
-          <button class="btn" type="submit">
-            22:00
-          </button>
-        </div>
-
-        <!-- bottoni-orario -->
-      </div>
-      <!-- sezione orario -->
+      <!-- sezione scheda-film -->
     </div>
-    <!-- sezione scheda-film -->
-  </div>
 
-  <!-- TRAILER -->
-  <div class="grid-item">
-    <!--560 315-->
-    <div class="trailer">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eHp3MbsCbMg" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+    <!-- TRAILER -->
+    <div class="grid-item">
+      <!--560 315-->
+      <div class="trailer">
+        <iframe width="100%" height="100%"  title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen v-bind:src="x.trailer"></iframe>
+      </div>
     </div>
+        </li>
   </div>
-
+<!-- PARTE VUE -->
 
   <!-- FOOTER -->
   <footer class="footer"
