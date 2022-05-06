@@ -13,7 +13,7 @@ let app = Vue.createApp({
                     Durata: "116 min",
                     Data: "17 febbraio 2022",
                     Distribuzione: "Sony Pictures/ Warner Bros. Italia",
-                    trama:"Basato su una delle serie di videogiochi più vendute e acclamate dalla critica,Uncharted presenta al pubblico il giovane e furbo Nathan Drake (Tom Holland)nella sua prima avventura alla ricerca del tesoro con l’arguto partner Victor “Sully” Sullivan (Mark Wahlberg). In un’epica avventura piena di azione che attraversa il mondo intero, i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo."},
+                    trama:"Basato su una delle serie di videogiochi più vendute e acclamate dalla critica, Uncharted presenta al pubblico il giovane e furbo Nathan Drake (Tom Holland)nella sua prima avventura alla ricerca del tesoro con l’arguto partner Victor “Sully” Sullivan (Mark Wahlberg). In un’epica avventura piena di azione che attraversa il mondo intero, i due protagonisti partono alla pericolosa ricerca del “più grande tesoro mai trovato”, inseguendo indizi che potrebbero condurli al fratello di Nathan, scomparso da tempo."},
                 {image: "../image/locandine/locandina (2).jpg",
                     riferimento: 'sch-film2',
                     trailer: "https://www.youtube.com/embed/ALtLuqMUOI4",
