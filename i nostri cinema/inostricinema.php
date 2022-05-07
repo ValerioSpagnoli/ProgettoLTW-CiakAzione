@@ -117,7 +117,7 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCookieSanLorenzo();">
+        <button class="btn" onclick="salvaCinema('SanLorenzo');">
           <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>
@@ -152,7 +152,7 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCookieLatina();">
+        <button class="btn" onclick="salvaCinema('Latina');">
           <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>
@@ -187,7 +187,7 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCookieCerveteri();">
+        <button class="btn" onclick="salvaCinema('Cerveteri');">
           <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>

@@ -121,7 +121,7 @@ session_start();
       <!-- 319 447 -->
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film1" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Uncharted" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -141,7 +141,7 @@ session_start();
       </div>
 
       <div id="latina">
-        <a href="../film/film.php#sch-film2" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=La figlia oscura" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -161,7 +161,7 @@ session_start();
       </div>
 
       <div id="cerveteri">
-        <a href="../film/film.php#sch-film3" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Gli idoli delle donne" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -181,7 +181,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri">
-        <a href="../film/film.php#sch-film4" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Il sesso degli angeli" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -201,7 +201,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-latina">
-        <a href="../film/film.php#sch-film5" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=La cena perfetta" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -221,7 +221,7 @@ session_start();
       </div>
 
       <div id="latina">
-        <a href="../film/film.php#sch-film6" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Sulle nuvole" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -241,7 +241,7 @@ session_start();
       </div>
 
       <div id="cerveteri">
-        <a href="../film/film.php#sch-film7" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Morbius" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -252,7 +252,7 @@ session_start();
             <tr>
               <td style="display: flex; justify-content: center; margin-bottom: 30px">
                 <footer class="footer-locandine">
-                  Amma's way
+                  Morbius
                 </footer>
               </td>
             </tr>
@@ -261,7 +261,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film8" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Troppo cattivi" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -272,7 +272,7 @@ session_start();
             <tr>
               <td style="display: flex; justify-content: center; margin-bottom: 30px">
                 <footer class="footer-locandine">
-                  L'arma dell'inganno
+                  Troppo cattivi
                 </footer>
               </td>
             </tr>
@@ -281,7 +281,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film9" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Twenty one pilots" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -302,7 +302,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film10" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Spencer" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -322,7 +322,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film11" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=I segreti di Silente" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -342,7 +342,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo">
-        <a href="../film/film.php#sch-film12" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=The Lost City" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -362,7 +362,7 @@ session_start();
       </div>
 
       <div id="cerveteri-latina">
-        <a href="../film/film.php#sch-film13" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Una vita in fuga" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -382,7 +382,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-latina">
-        <a href="../film/film.php#sch-film14" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=This much I know to be true" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -402,7 +402,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film15" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Top gun" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -422,7 +422,7 @@ session_start();
       </div>
 
       <div id="cerveteri-latina">
-        <a href="../film/film.php#sch-film16" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Sing" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -442,7 +442,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php#sch-film17" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=The northman" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -462,7 +462,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-latina">
-        <a href="../film/film.php#sch-film18" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Corro da te" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">

@@ -2,14 +2,13 @@ function leggiCookie(){
     nomeCookie = "cinema";
 	if (document.cookie.length > 0){
 		var inizio = document.cookie.indexOf(nomeCookie + "=");
-        console.log(inizio);
 
 		if (inizio != -1){
 		    inizio = inizio + nomeCookie.length + 1;
 		    var fine = document.cookie.indexOf(";",inizio);
 		    if (fine == -1) fine = document.cookie.length;
 		    nomeCinema = document.cookie.substring(inizio,fine);
-            console.log(nomeCinema)
+            console.log("Programmazinoe->leggiCookie: nomeCinema = " + nomeCinema)
 
             if(nomeCinema == "SanLorenzo"){
                 document.getElementById("scelta").selectedIndex = 1;
@@ -34,7 +33,7 @@ function filter(){
     var valoreSelezionato = x.options[indice];
     var valoreOpzione = valoreSelezionato.value;
 
-    console.log(valoreOpzione);
+    console.log("Programmazione->filter: valoreOpzione = " + valoreOpzione);
 
     $("#sanlorenzo").hide();
     $("#cerveteri").hide();
@@ -74,3 +73,21 @@ function filter(){
     }
 
 }
+
+
+function salvaCinema(){
+
+    var x = document.getElementById("scelta");
+    var indice = x.selectedIndex;
+
+    var valoreSelezionato = x.options[indice];
+    var valoreOpzione = valoreSelezionato.value;
+
+    console.log("Programmazione->salvaCinema: valoreOpzione = " + valoreOpzione);
+
+    var scadenza = new Date();
+    var adesso = new Date();
+    scadenza.setTime(adesso.getTime() + (parseInt(1) * 10000));
+    document.cookie = "cinema=" + valoreOpzione + '; expires=' + scadenza.toGMTString() + '; path=/';
+}
+
