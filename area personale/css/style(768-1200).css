@@ -12,7 +12,7 @@
 
 
 .body{
-    grid-template-rows: 1fr auto auto auto auto auto; 
+    grid-template-rows: 1fr auto auto; 
 }
 
 

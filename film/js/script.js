@@ -10,7 +10,7 @@ function leggiCookie(){
 		    nomeCinema = document.cookie.substring(inizio,fine);
             console.log("Film->leggiCookie: nomeCinema = " + nomeCinema)
 
-            if(nomeCinema == "SanLorenzo"){
+            if(nomeCinema == "San Lorenzo"){
                 document.getElementById("scelta").selectedIndex = 0;
             }
             if(nomeCinema == "Latina"){

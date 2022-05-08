@@ -44,7 +44,7 @@ else {
                         $_SESSION['cognome'] = $surname;
                         $_SESSION['datanascita'] = $datanascita;
                         $_SESSION['email'] = $email;
-                        header('Location: ../profilo.php');
+                        header('Location: ../profilo/profilo.php');
                     }
                 }
             }

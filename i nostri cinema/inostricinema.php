@@ -75,7 +75,7 @@
                   echo(" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> "); 
                 }
                 else{
-                  echo(" <a class='nav-link' href='../area personale/profilo.php'> Ciao ");
+                  echo(" <a class='nav-link' href='../area personale/profilo/profilo.php'> Ciao ");
                   echo($_SESSION['nome']);
                   echo("! </a> ");
                 }
@@ -117,7 +117,7 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCinema('SanLorenzo');">
+        <button class="btn" onclick="salvaCinema('San Lorenzo');">
           <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>

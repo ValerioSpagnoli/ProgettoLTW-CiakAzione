@@ -76,7 +76,7 @@
                   echo(" <a class='nav-link' href='./area personale/login/login.php'>Area Personale</a> "); 
                 }
                 else{
-                  echo(" <a class='nav-link' href='./area personale/profilo.php'> Ciao ");
+                  echo(" <a class='nav-link' href='./area personale/profilo/profilo.php'> Ciao ");
                   echo($_SESSION['nome']);
                   echo("! </a> ");
                 }
@@ -247,7 +247,6 @@
     <br>
     <span style="color: rgb(220, 220, 217);">Ciak&Azione 2022©Tutti i diritti riservati.</span>
     
-
   </footer>
 
 

@@ -10,7 +10,7 @@ function leggiCookie(){
 		    nomeCinema = document.cookie.substring(inizio,fine);
             console.log("Programmazinoe->leggiCookie: nomeCinema = " + nomeCinema)
 
-            if(nomeCinema == "SanLorenzo"){
+            if(nomeCinema == "San Lorenzo"){
                 document.getElementById("scelta").selectedIndex = 1;
             }
             if(nomeCinema == "Latina"){
@@ -43,7 +43,7 @@ function filter(){
     $("#sanlorenzo-latina").hide();
     $("#cerveteri-latina").hide();
 
-    if(valoreOpzione == "SanLorenzo"){
+    if(valoreOpzione == "San Lorenzo"){
         $("#sanlorenzo").show();
         $("#sanlorenzo-cerveteri-latina").show();
         $("#sanlorenzo-cerveteri").show();

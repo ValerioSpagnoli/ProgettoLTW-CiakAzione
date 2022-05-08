@@ -11,7 +11,7 @@
 
 
 .body{
-    grid-template-rows: 1fr auto auto auto; 
+    grid-template-rows: 1fr auto auto; 
 }
 
 
@@ -76,10 +76,11 @@
     't t'
     'a b' 
     'c c';
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     font-family: 'Vollkorn', serif;
-    width: 100%;
-    height: 100%;
+    margin: 4%;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px;
 }
 
 
@@ -122,3 +123,30 @@
     outline: solid 3px rgb(156, 101, 0);
 }
 
+.tit-abbonamenti{
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+.sezione-abbonamenti{
+    font-size: 15px;
+    padding: 1%;
+}
+
+.tit-prenotazioni{
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+.sezione-prenotazioni{
+    font-size: 15px;
+    padding: 1%;
+}

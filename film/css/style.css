@@ -158,3 +158,43 @@
 .rating:hover>input:checked~label:before {
     opacity: 0.4
 }
+/*Rating */
+
+
+
+/*Modal prenotazione*/
+
+
+.modal-body{
+    display: grid;
+    grid-template: 
+    'a a'
+    'c b'/1fr 1fr;
+    width: auto;
+}
+
+.modal-titolo{
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.modal-locandina{
+    grid-area: c;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.modal-descrizione{
+    grid-area: b;
+    padding: 10px;
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+}
+/*Modal prenotazione*/

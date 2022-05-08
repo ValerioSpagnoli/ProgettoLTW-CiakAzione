@@ -10,6 +10,8 @@ session_start();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script src="./js/script.js"></script>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -71,7 +73,7 @@ session_start();
               if (!isset($_SESSION['nome'])) {
                 echo (" <a class='nav-link' href='../area personale/login/login.php'>Area Personale</a> ");
               } else {
-                echo (" <a class='nav-link' href='../area personale/profilo.php'> Ciao ");
+                echo (" <a class='nav-link' href='../area personale/profilo/profilo.php'> Ciao ");
                 echo ($_SESSION['nome']);
                 echo ("! </a> ");
               }
@@ -89,18 +91,18 @@ session_start();
 
 
   <?php
-  // if (!(isset($_POST['loginButton']))) {
-  //   header("Location: ../../index.php");
+  // if (!(isset($_POST['scelta']))) {
+  //   header("Location: ../programmazione/programmazione.php");
   // } else {
   //   $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
   //     or die('Could not connect: ' . pg_last_error());
   // }
 
-
   $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
     or die('Could not connect: ' . pg_last_error());
 
   if ($dbconn) {
+    $cinema = $_COOKIE['cinema'];
     $titolo = $_GET['titolo'];
     $query1 = "SELECT * FROM film WHERE titolo='$titolo'";
     $result = pg_query($query1) or die(pg_last_error());
@@ -118,15 +120,10 @@ session_start();
     $_SESSION['locandina'] = $array['locandina'];
     $_SESSION['trailer'] = $array['trailer'];
     $_SESSION['disponibile'] = $array['disponibile'];
+    $_SESSION['cinema'] = $cinema;
   }
 
   ?>
-
-
-
-
-
-
 
 
   <!-- SCHEDA FILM -->
@@ -178,74 +175,109 @@ session_start();
         <div class="sceltacinema">
           <select id="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
 
-            <?php 
-              if($_SESSION['disponibile'] == 'sanlorenzo-cerveteri-latina'){
-                echo("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina'>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'sanlorenzo-cerveteri'){
-                echo("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'sanlorenzo-latina'){
-                echo("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina'>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'cerveteri-latina'){
-                echo("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina'>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'sanlorenzo'){
-                echo("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'cerveteri'){
-                echo("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-              }
-              else if($_SESSION['disponibile'] == 'latina'){
-                echo("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-                echo("<option value='Latina'>Ciak & Azione Latina</option>");
-                echo("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-              }
+            <?php
+            if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri-latina') {
+              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri') {
+              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'sanlorenzo-latina') {
+              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'cerveteri-latina') {
+              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'sanlorenzo') {
+              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'cerveteri') {
+              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+            } else if ($_SESSION['disponibile'] == 'latina') {
+              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+            }
 
             ?>
-
 
           </select>
         </div>
 
         <!-- bottoni-orario -->
         <div class="orario1">
-          <button class="btn" type="submit">
-            17:00
+          <button class="btn" name="btn-15:00" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+            15:00
           </button>
         </div>
 
         <div class="orario2">
-          <button class="btn" type="submit">
-            18:00
+          <button class="btn" name="btn-17:30" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+            17:30
           </button>
         </div>
 
         <div class="orario3">
-          <button class="btn" type="submit">
+          <button class="btn" name="btn-20:00" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
             20:00
           </button>
         </div>
 
         <div class="orario4">
-          <button class="btn" type="submit">
-            22:00
+          <button class="btn" name="btn-22:30" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+            22:30
           </button>
         </div>
         <!-- bottoni-orario -->
+
+        <!-- modal prenotazione -->
+        <div class="modal fade" id="modalPrenotazione" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Prenotazione Biglietto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+              </div>
+
+              <div class="modal-body">
+                <div class="modal-titolo">
+                  <?php echo ($_SESSION['titolo']) ?>
+                </div>
+                <div class="modal-locandina">
+                  <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
+                </div>
+                <div class="modal-descrizione">
+                  Dettagli prenotazione:
+                  <br>
+                  <ul>
+                    <li>Film: <?php echo ($_SESSION['titolo']) ?></li>
+                    <li>Cinema: <?php echo ($_SESSION['cinema']) ?></li>
+                    <li>Sala: ... </li>
+                    <li>Orario: ... </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                <button type="button" class="btn btn-primary">Prenota</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- modal prenotazione -->
+
 
       </div>
       <!-- sezione orario -->
@@ -278,7 +310,7 @@ session_start();
 
 
 
-  <script src="./js/script.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <!-- Optional JavaScript; choose one of the two! -->
