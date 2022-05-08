@@ -141,3 +141,14 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
+@media screen and (max-width: 370px){
+    .img{
+        grid-area: c1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 239px;
+        height: 358px;
+    }
+}

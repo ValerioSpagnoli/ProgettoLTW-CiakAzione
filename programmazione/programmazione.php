@@ -261,7 +261,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Troppo cattivi" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=Troppo Cattivi" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -272,7 +272,7 @@ session_start();
             <tr>
               <td style="display: flex; justify-content: center; margin-bottom: 30px">
                 <footer class="footer-locandine">
-                  Troppo cattivi
+                  Troppo Cattivi
                 </footer>
               </td>
             </tr>
@@ -442,7 +442,7 @@ session_start();
       </div>
 
       <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=The northman" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
+        <a href="../film/film.php?titolo=The Northman" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;">
           <table>
             <tr>
               <td style="display: flex; justify-content: center;">
@@ -453,7 +453,7 @@ session_start();
             <tr>
               <td style="display: flex; justify-content: center; margin-bottom: 30px">
                 <footer class="footer-locandine">
-                  The northman
+                  The Northman
                 </footer>
               </td>
             </tr>

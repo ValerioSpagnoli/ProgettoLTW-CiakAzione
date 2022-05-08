@@ -35,6 +35,7 @@
     grid-template:
     'c1'
     'c2';
+    justify-content: center;
 }
 
 .img{
@@ -42,6 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 319px;
+    height: 477px;
 }
 
 .stelle{

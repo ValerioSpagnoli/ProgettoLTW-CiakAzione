@@ -153,7 +153,7 @@ session_start();
           <label for="1">☆</label>
         </div>
         <div class="img">
-          <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="">
+          <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
         </div>
       </div>
 
