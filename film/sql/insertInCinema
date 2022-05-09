@@ -1,0 +1,14 @@
+insert into SanLorenzo values ('1', 'Uncharted');
+insert into SanLorenzo values ('2', 'I segreti di Silente');
+insert into SanLorenzo values ('3', 'The Northman');
+insert into SanLorenzo values ('4', 'The Lost City');
+
+insert into Cerveteri values ('1', 'Uncharted');
+insert into Cerveteri values ('2', 'I segreti di Silente');
+insert into Cerveteri values ('3', 'Una vita in fuga');
+insert into Cerveteri values ('4', 'Morbius');
+
+insert into Latina values ('1', 'Uncharted');
+insert into Latina values ('2', 'Una vita in fuga');
+insert into Latina values ('3', 'The Northman');
+insert into Latina values ('4', 'La figlia oscura');

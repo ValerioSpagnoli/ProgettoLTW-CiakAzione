@@ -13,15 +13,12 @@
     grid-template-columns: 1fr;
 }
 
-
 .grid-item-navbar{
     width: 100%;
     margin: 0;
 }
 
-
 .grid-item{
-    /* border: solid 2px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +33,7 @@
     'c1'
     'c2';
     justify-content: center;
+    padding: 5%;
 }
 
 .img{
@@ -53,6 +51,8 @@
     justify-content: center;
     align-items: center;
 }
+/* Sezione locandine film con rating */
+
 
 /* sezione orario */
 .titolo-orario{
@@ -73,9 +73,7 @@
     font-size: 18px;
     width: 100%;
     padding: 2%;
-    padding-bottom: 10%;
 }
-
 
 .btn{
     background-color: rgba(217, 217, 217, 0.916);
@@ -83,6 +81,7 @@
     border-radius: 10px;
     margin: 5px;
     font-size: 20px;
+    font-family: 'Vollkorn', serif;
 }
 
 .btn:hover{
@@ -114,6 +113,8 @@
     display: flex;
     justify-content: start;
 }
+/* sezione orario */
+
 
 /*Rating */
 .rate{
@@ -161,40 +162,42 @@
 /*Rating */
 
 
-
-/*Modal prenotazione*/
-
-
-.modal-body{
-    display: grid;
-    grid-template: 
-    'a a'
-    'c b'/1fr 1fr;
-    width: auto;
-}
-
-.modal-titolo{
-    grid-area: a;
-    display: flex;
-    justify-content: center;
-    font-family: 'Vollkorn', serif;
-    font-size: 30px;
-    padding: 10px;
-}
-
-.modal-locandina{
-    grid-area: c;
+/*prenotazione*/
+.btn-prenotazione{
+    grid-area: pd;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: auto;
-    padding: 10px;
+    height: 100%;
 }
 
-.modal-descrizione{
-    grid-area: b;
-    padding: 10px;
+.btn-conferma{
+    background-color: rgba(217, 217, 217, 0.916);
     font-family: 'Vollkorn', serif;
-    font-size: 18px;
+    border: solid 3px rgba(217, 217, 217, 0.916);
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
 }
-/*Modal prenotazione*/
+
+.btn-annulla{
+    background-color: rgba(217, 217, 217, 0.916);
+    font-family: 'Vollkorn', serif;
+    border: solid 3px rgba(217, 217, 217, 0.916);
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.btn-conferma:hover{
+    border: solid 3px rgb(0, 158, 0);
+    transition-duration: 0.6s;
+}
+
+.btn-annulla:hover{
+    border: solid 3px rgb(175, 0, 0);
+    transition-duration: 0.6s;
+}
+/*prenotazione*/

@@ -12,19 +12,6 @@
     grid-template-rows: 1fr auto auto auto auto;
 }
 
-/* Programmazione */
-.programmazione{
-    /* font-family: 'RocknRoll One', sans-serif; */
-    /* font-family: 'Montserrat Subrayada', sans-serif; */
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 800;
-    font-size: 35px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
 /*Bottoni della navbar*/
 .btn-navbar{
     font-family: 'Vollkorn', serif;
@@ -64,7 +51,8 @@
 }
 /*Bottone area personale nella navbar*/
 
-.schedafilm{
+/*SCHEDA FILM*/
+.scheda-film{
     display: grid;
     grid-template: 
     'a' auto
@@ -73,15 +61,11 @@
     'b' auto ;
     width: 90%;
     height: 100%;
-    /* padding-left: 2%;
-    padding-right: 2%; */
-    /* padding-top: 2%;
-    padding-bottom: 2%; */
     border-radius: 15px;
     background-color: rgba(155, 155, 155, 0.651);
 }
 
-/* sezione titolo film */
+/* titolo film */
 .tit-film{
     grid-area: a;
     display: flex;
@@ -92,7 +76,7 @@
     margin: 2%;
 }
 
-/* sezione scheda film */
+/* descrizione film */
 .descrizione{
     grid-area: b;
     display: flex;
@@ -100,10 +84,12 @@
     width: 100%;
     font-family: 'Vollkorn', serif;
     font-size: 15px;
-    padding: 6%;
+    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
 }
 
-
+/* trailer film */
 @media screen and (max-width: 414px){
 .trailer{
     display: flex;
@@ -123,7 +109,9 @@
         height: 238px;
     } 
 }
+/* trailer film */
 
+/* sezione orario */
 .orario{
     display: flex;
     justify-content: center;
@@ -152,3 +140,57 @@
         height: 358px;
     }
 }
+/*SCHEDA FILM*/
+
+/*SCHEDA PRENOTAZIONE*/
+.scheda-prenotazione{
+    display: grid;
+    grid-template: 
+    'pa'
+    'pc'
+    'pb' 
+    'pd';
+    width: 90%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    background-color: rgba(155, 155, 155, 0.651);
+}
+
+/* titolo prenotazione */
+.tit-prenotazione{
+    grid-area: pa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 2%;
+}
+
+/* descrizione prenotazione */
+.descrizione-prenotazione{
+    grid-area: pb;
+    display: flex;
+    justify-content: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    padding: 6%;
+}
+
+/* immagine prenotazione */
+.img-pren{
+    grid-area: pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/*SCHEDA PRENOTAZIONE*/

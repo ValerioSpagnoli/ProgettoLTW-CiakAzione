@@ -104,8 +104,7 @@ session_start();
 
     <div class="sceltacinema">
       <select id="scelta" name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;" onchange="filter();">
-        <option value="Tutti i Cinema" selected>Tutti i Cinema</option>
-        <option value="San Lorenzo">Ciak & Azione San Lorenzo, Roma</option>
+        <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
         <option value="Latina">Ciak & Azione Latina</option>
         <option value="Cerveteri">Ciak & Azione Cerveteri</option>
       </select>
@@ -162,86 +161,6 @@ session_start();
       </div>
 
       <div id="cerveteri">
-        <a href="../film/film.php?titolo=Gli idoli delle donne" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (3).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Gli idoli delle donne
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri">
-        <a href="../film/film.php?titolo=Il sesso degli angeli" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (4).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Il sesso degli angeli
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-latina">
-        <a href="../film/film.php?titolo=La cena perfetta" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (5).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  La cena perfetta
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="latina">
-        <a href="../film/film.php?titolo=Sulle nuvole" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (6).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Sulle nuvole
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="cerveteri">
         <a href="../film/film.php?titolo=Morbius" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
           <table>
             <tr>
@@ -261,68 +180,7 @@ session_start();
         </a>
       </div>
 
-      <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Troppo Cattivi" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (8).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Troppo Cattivi
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Twenty one pilots" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (9).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Twenty one pilots
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Spencer" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (10).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Spencer
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri-latina">
+      <div id="sanlorenzo-cerveteri">
         <a href="../film/film.php?titolo=I segreti di Silente" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
           <table>
             <tr>
@@ -383,66 +241,6 @@ session_start();
       </div>
 
       <div id="sanlorenzo-latina">
-        <a href="../film/film.php?titolo=This much I know to be true" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (14).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  This much I know to be true
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Top gun" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (15).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Top gun
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="cerveteri-latina">
-        <a href="../film/film.php?titolo=Sing" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (16).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Sing
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri-latina">
         <a href="../film/film.php?titolo=The Northman" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
           <table>
             <tr>
@@ -455,26 +253,6 @@ session_start();
               <td style="display: flex; justify-content: center; margin-bottom: 30px">
                 <footer class="footer-locandine">
                   The Northman
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-latina">
-        <a href="../film/film.php?titolo=Corro da te" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (18).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Corro da te
                 </footer>
               </td>
             </tr>

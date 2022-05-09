@@ -104,22 +104,34 @@ session_start();
   if ($dbconn) {
     $cinema = $_COOKIE['cinema'];
     $titolo = $_GET['titolo'];
-    $query1 = "SELECT * FROM film WHERE titolo='$titolo'";
-    $result = pg_query($query1) or die(pg_last_error());
-    $array = pg_fetch_array($result, null, PGSQL_ASSOC);
 
-    $_SESSION['titolo'] = $array['titolo'];
-    $_SESSION['regista'] = $array['regista'];
-    $_SESSION['genere'] = $array['genere'];
-    $_SESSION['anno'] = $array['anno'];
-    $_SESSION['paese'] = $array['paese'];
-    $_SESSION['durata'] = $array['durata'];
-    $_SESSION['datauscita'] = $array['datauscita'];
-    $_SESSION['distribuzione'] = $array['distribuzione'];
-    $_SESSION['trama'] = $array['trama'];
-    $_SESSION['locandina'] = $array['locandina'];
-    $_SESSION['trailer'] = $array['trailer'];
-    $_SESSION['disponibile'] = $array['disponibile'];
+    $query1 = "SELECT * FROM film WHERE titolo='$titolo'";
+    $result1 = pg_query($query1) or die(pg_last_error());
+    $array1 = pg_fetch_array($result1, null, PGSQL_ASSOC);
+
+    $query2 = "SELECT * FROM $cinema WHERE film='$titolo'";
+    $result2 = pg_query($query2) or die(pg_last_error());
+    $array2 = pg_fetch_array($result2, null, PGSQL_ASSOC);
+
+    $_SESSION['titolo'] = $array1['titolo'];
+    $_SESSION['regista'] = $array1['regista'];
+    $_SESSION['genere'] = $array1['genere'];
+    $_SESSION['anno'] = $array1['anno'];
+    $_SESSION['paese'] = $array1['paese'];
+    $_SESSION['durata'] = $array1['durata'];
+    $_SESSION['datauscita'] = $array1['datauscita'];
+    $_SESSION['distribuzione'] = $array1['distribuzione'];
+    $_SESSION['trama'] = $array1['trama'];
+    $_SESSION['locandina'] = $array1['locandina'];
+    $_SESSION['trailer'] = $array1['trailer'];
+    $_SESSION['disponibile'] = $array1['disponibile'];
+
+    $_SESSION['posti1500'] = $array2['posti1530'];
+    $_SESSION['posti1730'] = $array2['posti1730'];
+    $_SESSION['posti2000'] = $array2['posti2000'];
+    $_SESSION['posti2230'] = $array2['posti2230'];
+    $_SESSION['sala'] = $array2['sala'];
+
     $_SESSION['cinema'] = $cinema;
   }
 
@@ -130,8 +142,8 @@ session_start();
   <div class="grid-item">
 
     <!-- sezione scheda-film -->
-    <div class="schedafilm">
-      <a v-bind:name="x.riferimento"></a>
+    <div class="scheda-film">
+
       <div class="tit-film">
         <?php echo ($_SESSION['titolo']) ?>
       </div>
@@ -173,110 +185,111 @@ session_start();
         </div>
 
         <div class="sceltacinema">
-          <select id="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
 
-            <?php
-            if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri-latina') {
-              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri') {
-              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'sanlorenzo-latina') {
-              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'cerveteri-latina') {
-              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'sanlorenzo') {
-              echo ("<option value='San Lorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'cerveteri') {
-              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
-            } else if ($_SESSION['disponibile'] == 'latina') {
-              echo ("<option value='San Lorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
-              echo ("<option value='Latina'>Ciak & Azione Latina</option>");
-              echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
-            }
+          <table>
+            <tr>
+              <td>
+                <select id="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;" onchange="scriviCookie();">
 
-            ?>
+                  <?php
+                  if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri-latina') {
+                    echo ("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'sanlorenzo-cerveteri') {
+                    echo ("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'sanlorenzo-latina') {
+                    echo ("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'cerveteri-latina') {
+                    echo ("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'sanlorenzo') {
+                    echo ("<option value='SanLorenzo'>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'cerveteri') {
+                    echo ("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina' disabled>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri'>Ciak & Azione Cerveteri</option>");
+                  } else if ($_SESSION['disponibile'] == 'latina') {
+                    echo ("<option value='SanLorenzo' disabled>Ciak & Azione San Lorenzo, Roma</option>");
+                    echo ("<option value='Latina'>Ciak & Azione Latina</option>");
+                    echo ("<option value='Cerveteri' disabled>Ciak & Azione Cerveteri</option>");
+                  }
 
-          </select>
+                  ?>
+
+                </select>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 20px; display:flex; justify-content:center">
+                Scegli l'orario di prenotazione:
+              </td>
+            </tr>
+
+          </table>
+
         </div>
+
 
         <!-- bottoni-orario -->
         <div class="orario1">
-          <button class="btn" name="btn-15:00" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+          <button class="btn" name="btn-15:00" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
+                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=15:00');
+                                                                                      } else {
+                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=15:00');
+                                                                                      } ?> '" 
+                                                                                      <?php if ($_SESSION['posti1500'] == 0) {
+                                                                                                echo ('disabled');} ?>>
             15:00
           </button>
         </div>
 
         <div class="orario2">
-          <button class="btn" name="btn-17:30" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+          <button class="btn" name="btn-17:30" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
+                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=17:30');
+                                                                                      } else {
+                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=17:30');
+                                                                                      } ?> '"
+                                                                                      <?php if ($_SESSION['posti1730'] == 0) {
+                                                                                                echo ('disabled');} ?>>
             17:30
           </button>
         </div>
 
         <div class="orario3">
-          <button class="btn" name="btn-20:00" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+          <button class="btn" name="btn-20:00" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
+                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=20:00');
+                                                                                      } else {
+                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=20:00');
+                                                                                      } ?>'"
+                                                                                      <?php if ($_SESSION['posti2000'] == 0) {
+                                                                                                echo ('disabled');} ?>>
             20:00
           </button>
         </div>
 
         <div class="orario4">
-          <button class="btn" name="btn-22:30" type="submit" data-bs-toggle="modal" data-bs-target="#modalPrenotazione">
+          <button class="btn" name="btn-22:30" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
+                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=22:30');
+                                                                                      } else {
+                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=22:30');
+                                                                                      } ?>'"
+                                                                                      <?php if ($_SESSION['posti2230'] == 0) {
+                                                                                                echo ('disabled');} ?>>
             22:30
           </button>
         </div>
         <!-- bottoni-orario -->
 
-        <!-- modal prenotazione -->
-        <div class="modal fade" id="modalPrenotazione" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-
-              <div class="modal-header">
-
-                <h5 class="modal-title" id="exampleModalLabel">Prenotazione Biglietto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-              </div>
-
-              <div class="modal-body">
-                <div class="modal-titolo">
-                  <?php echo ($_SESSION['titolo']) ?>
-                </div>
-                <div class="modal-locandina">
-                  <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
-                </div>
-                <div class="modal-descrizione">
-                  Dettagli prenotazione:
-                  <br>
-                  <ul>
-                    <li>Film: <?php echo ($_SESSION['titolo']) ?></li>
-                    <li>Cinema: <?php echo ($_SESSION['cinema']) ?></li>
-                    <li>Sala: ... </li>
-                    <li>Orario: ... </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                <button type="button" class="btn btn-primary">Prenota</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <!-- modal prenotazione -->
 
 
       </div>

@@ -117,7 +117,7 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCinema('San Lorenzo');">
+        <button class="btn" onclick="salvaCinema('SanLorenzo');">
           <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
         </button>
       </div>

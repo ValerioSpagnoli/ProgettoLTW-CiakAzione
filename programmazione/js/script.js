@@ -10,14 +10,14 @@ function leggiCookie(){
 		    nomeCinema = document.cookie.substring(inizio,fine);
             console.log("Programmazinoe->leggiCookie: nomeCinema = " + nomeCinema)
 
-            if(nomeCinema == "San Lorenzo"){
-                document.getElementById("scelta").selectedIndex = 1;
+            if(nomeCinema == "SanLorenzo"){
+                document.getElementById("scelta").selectedIndex = 0;
             }
             if(nomeCinema == "Latina"){
-                document.getElementById("scelta").selectedIndex = 2;
+                document.getElementById("scelta").selectedIndex = 1;
             }
             if(nomeCinema == "Cerveteri"){
-                document.getElementById("scelta").selectedIndex = 3;
+                document.getElementById("scelta").selectedIndex = 2;
             }
 		}
 	}
@@ -43,7 +43,7 @@ function filter(){
     $("#sanlorenzo-latina").hide();
     $("#cerveteri-latina").hide();
 
-    if(valoreOpzione == "San Lorenzo"){
+    if(valoreOpzione == "SanLorenzo"){
         $("#sanlorenzo").show();
         $("#sanlorenzo-cerveteri-latina").show();
         $("#sanlorenzo-cerveteri").show();
@@ -62,16 +62,6 @@ function filter(){
         $("#sanlorenzo-latina").show();
         $("#cerveteri-latina").show();
     }
-    if(valoreOpzione == "Tutti i Cinema"){
-        $("#sanlorenzo").show();
-        $("#cerveteri").show();
-        $("#latina").show();
-        $("#sanlorenzo-cerveteri-latina").show();
-        $("#sanlorenzo-cerveteri").show();
-        $("#sanlorenzo-latina").show();
-        $("#cerveteri-latina").show();
-    }
-
 }
 
 
@@ -87,7 +77,7 @@ function salvaCinema(){
 
     var scadenza = new Date();
     var adesso = new Date();
-    scadenza.setTime(adesso.getTime() + (parseInt(1) * 10000));
+    scadenza.setTime(adesso.getTime() + (parseInt(1) * 86400000));
     document.cookie = "cinema=" + valoreOpzione + '; expires=' + scadenza.toGMTString() + '; path=/';
 }
 
