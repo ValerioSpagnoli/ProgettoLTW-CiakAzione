@@ -73,9 +73,7 @@ session_start();
               if (!isset($_SESSION['nome'])) {
                 echo (" <a class='nav-link' href='../login/login.php'>Area Personale</a> ");
               } else {
-                echo (" <a class='nav-link' href='#'> Ciao ");
-                echo ($_SESSION['nome']);
-                echo ("! </a> ");
+                echo (" <a class='nav-link' href='../logout/logout.php'> Logout </a>" );
               }
               ?>
 

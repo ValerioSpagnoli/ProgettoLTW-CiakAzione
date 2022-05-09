@@ -1,23 +1,12 @@
 <?php
-session_start();
-?>
 
-<!DOCTYPE html>
-<html lang="en">
+    session_start();
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
-
-    <?php
     $postiRimanenti = $_COOKIE['postiRimanenti'];
     $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
         or die('Could not connect: ' . pg_last_error());
+
 
     if ($dbconn) {
         $cinema = $_SESSION['cinema'];
@@ -66,15 +55,11 @@ session_start();
         }
         */
 
-        header('Location: ../../area personale/profilo/profilo.php');
 
-        
+        header('Location: ../../area personale/profilo/profilo.php');
     }
 
-    ?>
+?>
 
 
 
-</body>
-
-</html>
