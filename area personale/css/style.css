@@ -26,17 +26,14 @@
 
 
 .grid-item{
-    /* border: solid 2px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3%;
-
-    
+    margin-top: 3%;  
 }
 
-/* Profilo personale */
 
+/* PROFILO */
 .foto{
     grid-area: a;
     display:flex;
@@ -57,24 +54,6 @@
     margin: 20px;
     font-size: 20px;
     justify-content:center ;
-}
-
-
-.btn-logout{
-    font-family: 'Vollkorn', serif;
-    background-color: rgba(217, 217, 217, 0.916);
-    border-radius: 0.4em;
-    margin-top: 5px;
-    font-size: 25px;
-    padding: 10px;
-    border: solid 3px rgb(156, 101, 0);
-}
-
-.btn-logout:hover{
-    background-color: rgb(156, 101, 0);
-    transition-duration: 0.6s;
-    color: rgb(220, 220, 217);
-    border: solid 3px rgb(220, 220, 217);
 }
 
 .abbonamenti{
@@ -120,3 +99,4 @@
     align-items: center;
     height: 35px;
 }
+/* PROFILO */

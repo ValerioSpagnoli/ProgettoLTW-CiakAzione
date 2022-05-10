@@ -16,21 +16,6 @@
     grid-template-rows: 1fr auto auto; 
 }
 
-
-/*titolo della pagina*/
-.titolo{
-    /* font-family: 'RocknRoll One', sans-serif; */
-    /* font-family: 'Montserrat Subrayada', sans-serif; */
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 800;
-    font-size: 50px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-
 /*Bottoni della navbar*/
 .btn-navbar{
     font-family: 'Vollkorn', serif;
@@ -69,7 +54,22 @@
 }
 /*Bottone area personale nella navbar*/
 
-/* Profilo personale */
+
+/*titolo della pagina*/
+.titolo{
+    /* font-family: 'RocknRoll One', sans-serif; */
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 800;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+/* PROFILO */
 .profilo{
     display: grid;
     grid-template: 
@@ -85,7 +85,6 @@
     height: 100%;
 }
 
-
 .nome{
     grid-area: t;
     display: flex;
@@ -95,9 +94,38 @@
     align-items: center;
 }
 
+.tit-abbonamenti{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+
+.sezione-abbonamenti{
+    font-size: 14px;
+    padding: 1%;
+}
+
+.tit-prenotazioni{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+.sezione-prenotazioni{
+    font-size: 14px;
+    padding: 1%;
+}
+/* PROFILO */
 
 
-/*form-login*/
+/* LOGIN E REGISTRAZIONE */
 .form{
     font-family: 'Vollkorn', serif;
     font-size: 22px;
@@ -135,33 +163,5 @@
 .input:focus{
     outline: solid 3px rgb(156, 101, 0);
 }
-/*form-login*/
+/* LOGIN E REGISTRAZIONE */
 
-
-.tit-abbonamenti{
-    font-size: 18px;
-    font-weight: bold;
-    border-bottom: solid 2px black;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 1%;
-    background-color: rgba(122, 122, 122, 0.763);
-}
-.sezione-abbonamenti{
-    font-size: 14px;
-    padding: 1%;
-}
-
-.tit-prenotazioni{
-    font-size: 18px;
-    font-weight: bold;
-    border-bottom: solid 2px black;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 1%;
-    background-color: rgba(122, 122, 122, 0.763);
-}
-.sezione-prenotazioni{
-    font-size: 14px;
-    padding: 1%;
-}
