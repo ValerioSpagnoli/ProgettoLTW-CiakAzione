@@ -4,6 +4,8 @@
 
 
     $postiRimanenti = $_COOKIE['postiRimanenti'];
+    $postiSelezionati = $_COOKIE['postiSelezionati'];
+
     $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
         or die('Could not connect: ' . pg_last_error());
 
@@ -29,32 +31,19 @@
         $query2 = "UPDATE $cinema SET $postiOrario=$postiRimanenti WHERE sala='$sala'";
         $result2 = pg_query($query2) or die(pg_last_error());
 
+        $id = rand(1,10000);
 
-        /*
-        // definisco mittente e destinatario della mail
-        $nome_mittente = "Ciak & Azione";
-        $mail_mittente = "ciak.e.azione.cinema@gmail.com";
-        $mail_destinatario = $_SESSION['email'];
-
-        // definisco il subject ed il body della mail
-        $mail_oggetto = "Prenotazione Biglietto";
-        $mail_corpo = "Bella zi";
-
-        // aggiusto un po' le intestazioni della mail
-        // E' in questa sezione che deve essere definito il mittente (From)
-        // ed altri eventuali valori come Cc, Bcc, ReplyTo e X-Mailer
-        $mail_headers = "From: " .  $nome_mittente . " <" .  $mail_mittente . ">\r\n";
-        $mail_headers .= "Reply-To: " .  $mail_mittente . "\r\n";
-        // $mail_headers .= "X-Mailer: PHP/" . phpversion();
-
-        if (mail($mail_destinatario, $mail_oggetto, $mail_corpo, $mail_headers)){
-            echo "Messaggio inviato con successo a " . $mail_destinatario;
+        $query3 = "SELECT * FROM prenotazioni WHERE 'idPrenotazione'=$id ";
+        while(pg_query($query3)){
+            $id = rand(1,10000);
+            $query3 = "SELECT * FROM prenotazioni WHERE 'idPrenotazione'=$id ";
         }
-        else{
-            echo "Errore. Nessun messaggio inviato.";
-        }
-        */
 
+        $email = $_SESSION['email'];
+        $titolo = $_SESSION['titolo'];
+
+        $query4 = "INSERT INTO prenotazioni VALUES ($id, '$email', '$titolo', '$orario', '$cinema', '$sala', '$postiSelezionati') ";
+        $result4 = pg_query($query4) or die(pg_last_error());
 
         header('Location: ../../area personale/profilo/profilo.php');
     }

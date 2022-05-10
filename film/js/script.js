@@ -69,6 +69,7 @@ function confermaPrenotazione(){
     var adesso = new Date();
     scadenza.setTime(adesso.getTime() + (parseInt(1) * 86400000));
     document.cookie = "postiRimanenti=" + postiRimanenti + '; expires=' + scadenza.toGMTString() + '; path=/';
+    document.cookie = "postiSelezionati=" + valoreOpzione + '; expires=' + scadenza.toGMTString() + '; path=/';
 }
 
 

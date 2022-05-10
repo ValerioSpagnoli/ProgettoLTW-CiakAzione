@@ -47,8 +47,7 @@ function filter(){
         $("#sanlorenzo").show();
         $("#sanlorenzo-cerveteri-latina").show();
         $("#sanlorenzo-cerveteri").show();
-        $("#sanlorenzo-latina").show();
-        
+        $("#sanlorenzo-latina").show();   
     }
     if(valoreOpzione == "Cerveteri"){
         $("#cerveteri").show();

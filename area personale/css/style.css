@@ -108,4 +108,24 @@
     border: solid 3px black;
 }
 
+.riga-prenotazioni{
+    display: grid;
+    grid-template: 
+    'k1 k2'/5fr 1fr;
+    height: auto;
+    padding-top: 5px;
+}
 
+.testo-prenotazione{
+    grid-area: k1;
+    display: flex;
+    justify-content: start;
+}
+
+.btn-prenotazione{
+    grid-area: k2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 35px;
+}

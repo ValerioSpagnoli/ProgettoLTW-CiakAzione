@@ -9,6 +9,7 @@ session_start();
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/vue@3.2.33/dist/vue.global.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -20,6 +21,15 @@ session_start();
   <link rel="stylesheet" href="./css/style(1200).css" media="screen and (min-width: 1200px)">
 
   <title>Ciak & Azione</title>
+
+
+
+  <?php
+
+
+
+
+  ?>
 
 
 </head>
@@ -117,148 +127,48 @@ session_start();
   <div class="grid-item">
 
     <div class="locandine">
+  
+      <?php
 
-      <!-- 319 447 -->
+      $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
+        or die('Could not connect: ' . pg_last_error());
 
-      <div id="sanlorenzo-cerveteri-latina">
-        <a href="../film/film.php?titolo=Uncharted" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (1).jpg" width="80%" height="80%">
-              </td>
-            </tr>
+      if ($dbconn) {
+        $query1 = "SELECT * FROM film";
+        $result1 = pg_query($query1) or die(pg_last_error());
 
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Uncharted
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
+        while ($line = pg_fetch_array($result1, null, PGSQL_ASSOC)) {
+          $disponibile = $line['disponibile'];
+          $titolo = $line['titolo'];
+          $locandina = $line['locandina'];
+          
 
-      <div id="latina">
-        <a href="../film/film.php?titolo=La figlia oscura" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (2).jpg" width="80%" height="80%">
-              </td>
-            </tr>
+          echo ("<div id='"); echo ($disponibile); echo ("'>");
+            echo ("<a href='../film/film.php?titolo="); echo ($titolo); echo ("' style='color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;' onclick='salvaCinema();'> ");
+            echo ("
+              <table>
+                <tr>
+                  <td style='display: flex; justify-content: center;'> ");
+              echo ("<img class='img-loc' src='"); echo ($locandina); echo ("' width='80%' height='80%'>");
+              echo ("
+                  </td>
+                </tr>
+                <tr>
+                  <td style='display: flex; justify-content: center; margin-bottom: 30px'>
+                    <footer class='footer-locandine'>");   
+                      echo ($titolo);
+              echo ("
+                    </footer>
+                  </td>
+                </tr>
+              </table>
+            </a>
+          </div> ");
 
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  La figlia oscura
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
+        }
+      }
 
-      <div id="cerveteri">
-        <a href="../film/film.php?titolo=Morbius" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (7).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Morbius
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-cerveteri">
-        <a href="../film/film.php?titolo=I segreti di Silente" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (11).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  I segreti di Silente
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo">
-        <a href="../film/film.php?titolo=The Lost City" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (12).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  The Lost City
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="cerveteri-latina">
-        <a href="../film/film.php?titolo=Una vita in fuga" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (13).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  Una vita in fuga
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
-
-      <div id="sanlorenzo-latina">
-        <a href="../film/film.php?titolo=The Northman" style="color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;" onclick="salvaCinema();">
-          <table>
-            <tr>
-              <td style="display: flex; justify-content: center;">
-                <img class="img-loc" src="../image/locandine/locandina (17).jpg" width="80%" height="80%">
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: flex; justify-content: center; margin-bottom: 30px">
-                <footer class="footer-locandine">
-                  The Northman
-                </footer>
-              </td>
-            </tr>
-          </table>
-        </a>
-      </div>
+      ?>
 
     </div>
   </div>

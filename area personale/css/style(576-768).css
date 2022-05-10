@@ -122,3 +122,32 @@
     outline: solid 3px rgb(156, 101, 0);
 }
 /*form-login*/
+
+
+.tit-abbonamenti{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+.sezione-abbonamenti{
+    font-size: 14px;
+    padding: 1%;
+}
+
+.tit-prenotazioni{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1%;
+    background-color: rgba(122, 122, 122, 0.763);
+}
+.sezione-prenotazioni{
+    font-size: 14px;
+    padding: 1%;
+}

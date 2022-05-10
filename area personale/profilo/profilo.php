@@ -73,7 +73,7 @@ session_start();
               if (!isset($_SESSION['nome'])) {
                 echo (" <a class='nav-link' href='../login/login.php'>Area Personale</a> ");
               } else {
-                echo (" <a class='nav-link' href='../logout/logout.php'> Logout </a>" );
+                echo (" <a class='nav-link' href='../logout/logout.php'> Logout </a>");
               }
               ?>
 
@@ -124,7 +124,49 @@ session_start();
             Prenotazioni
           </div>
           <div class="sezione-prenotazioni">
-            Uncharted - Sala 1 Ciak & Azione San Lorenzo - 18.00
+
+            <?php
+            $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
+              or die('Could not connect: ' . pg_last_error());
+
+
+            if ($dbconn) {
+              $email = $_SESSION['email'];
+              $query1 = "SELECT * FROM prenotazioni WHERE email='$email'";
+
+
+              $result1 = pg_query($query1) or die(pg_last_error());
+
+              while ($line = pg_fetch_array($result1, null, PGSQL_ASSOC)) {
+                $id = $line['idprenotazione'];
+                $titolo = $line['titolo'];
+                $orario = $line['orario'];
+                $cinema = $line['cinema'];
+                $sala = $line['sala'];
+                $postiprenotati = $line['postiprenotati'];
+
+                $prenotazione = "N°: " . $id . "  -  " . $titolo . "  -  Cinema: Ciak&Azione " . $cinema . "  -  Orario: " . $orario . "  -  Sala: " . $sala . "  -  Numero Biglietti: " . $postiprenotati;
+
+
+                echo ("<div class='riga-prenotazioni'>");
+                  echo("<div class='testo-prenotazione'>");
+                    echo($prenotazione);
+                  echo("</div>");
+                  echo("<div class='btn-prenotazione'>");
+                    echo("<a href='../php/cancellaPrenotazione.php?id=");echo($id);echo("'> <img src='../../image/cestino.png' width='32px' height='32px'> </a>");
+                  echo("</div>");
+                echo ("</div>");
+                echo ("<hr>");
+              }
+            }
+            ?>
+
+            
+            <b> * Presenta il numero della prenotazione al cinema per comprare i biglietti! </b>
+
+
+          
+
           </div>
         </div>
 

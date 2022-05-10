@@ -240,13 +240,18 @@ session_start();
         </div>
 
 
+        
+
+
+
+
         <!-- bottoni-orario -->
         <div class="orario1">
           <button class="btn" name="btn-15:00" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
-                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=15:00');
+                                                                                        echo('../area personale/login/login.php');
                                                                                       } else {
                                                                                         echo ('./prenotazione/prenotazioneLog.php?orario=15:00');
-                                                                                      } ?> '" 
+                                                                                      } ?> ' " 
                                                                                       <?php if ($_SESSION['posti1500'] == 0) {
                                                                                                 echo ('disabled');} ?>>
             15:00
@@ -255,7 +260,7 @@ session_start();
 
         <div class="orario2">
           <button class="btn" name="btn-17:30" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
-                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=17:30');
+                                                                                        echo('../area personale/login/login.php');
                                                                                       } else {
                                                                                         echo ('./prenotazione/prenotazioneLog.php?orario=17:30');
                                                                                       } ?> '"
@@ -267,7 +272,7 @@ session_start();
 
         <div class="orario3">
           <button class="btn" name="btn-20:00" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
-                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=20:00');
+                                                                                        echo('../area personale/login/login.php');
                                                                                       } else {
                                                                                         echo ('./prenotazione/prenotazioneLog.php?orario=20:00');
                                                                                       } ?>'"
@@ -279,7 +284,7 @@ session_start();
 
         <div class="orario4">
           <button class="btn" name="btn-22:30" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
-                                                                                        echo ('./prenotazione/prenotazioneNoLog.php?orario=22:30');
+                                                                                        echo('../area personale/login/login.php');
                                                                                       } else {
                                                                                         echo ('./prenotazione/prenotazioneLog.php?orario=22:30');
                                                                                       } ?>'"
