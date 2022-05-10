@@ -153,7 +153,7 @@ session_start();
                     echo($prenotazione);
                   echo("</div>");
                   echo("<div class='btn-prenotazione'>");
-                    echo("<a href='../php/cancellaPrenotazione.php?id=");echo($id);echo("'> <img src='../../image/cestino.png' width='32px' height='32px'> </a>");
+                    echo("<a href='../php/cancellaPrenotazione.php?id=");echo($id);echo("'> <img src='../../image/icone/cestino.png' width='32px' height='32px'> </a>");
                   echo("</div>");
                 echo ("</div>");
                 echo ("<hr>");
@@ -164,8 +164,6 @@ session_start();
             
             <b> * Presenta il numero della prenotazione al cinema per comprare i biglietti! </b>
 
-
-          
 
           </div>
         </div>

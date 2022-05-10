@@ -220,11 +220,11 @@
       </div>
 
       <div class="contatti">
-        <a href="https://www.instagram.com/ciak.e.azione.cinema/"><img src="./image/chi siamo/icone/ig-48.png" alt=""
+        <a href="https://www.instagram.com/ciak.e.azione.cinema/"><img src="./image/icone/ig-48.png" alt=""
             width="40px" height="40px"></a> @ciak.e.azione.cinema
         <br>
         <br>
-        <a href="https://www.instagram.com/ciak.e.azione.cinema/"><img src="./image/chi siamo/icone/fb-48.png" alt=""
+        <a href="https://www.instagram.com/ciak.e.azione.cinema/"><img src="./image/icone/fb-48.png" alt=""
             width="40px" height="40px"></a> @ciak.e.azione.cinema
         <br>
         <br>
