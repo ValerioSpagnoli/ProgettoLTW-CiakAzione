@@ -162,7 +162,7 @@ session_start();
             ?>
 
             
-            <b> * Presenta il numero della prenotazione al cinema per comprare i biglietti! </b>
+            <b> * Presenta il numero della prenotazione al cinema per acquistare i biglietti! </b>
 
 
           </div>
