@@ -102,10 +102,10 @@ session_start();
       </div>
 
       <div class="dati">
-        <b>Nome:</b> <?php echo ($_SESSION['nome']); ?> <br>
-        <b>Cognome:</b> <?php echo ($_SESSION['cognome']); ?> <br>
-        <b>Data di nascita:</b> <?php echo ($_SESSION['datanascita']); ?> <br>
-        <b>Email:</b> <?php echo ($_SESSION['email']); ?> <br>
+        <div> Nome: <?php echo ($_SESSION['nome']); ?> </div>
+        <div> Cognome: <?php echo ($_SESSION['cognome']); ?> </div>
+        <div> Data di nascita: <?php echo ($_SESSION['datanascita']); ?> </div>
+        <div> Email: <?php echo ($_SESSION['email']); ?> </div> 
       </div>
 
       <div class="azioni">

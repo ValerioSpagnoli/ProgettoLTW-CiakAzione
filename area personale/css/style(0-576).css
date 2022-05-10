@@ -76,9 +76,24 @@
     'b '
     'c' ;
     font-family: 'Vollkorn', serif;
+    margin: 4%;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
+
+
+.nome{
+    grid-area: t;
+    display: flex;
+    margin: 20px;
+    font-size: 30px;
+    justify-content:center ;
+    align-items: center;
+}
+
 
 
 /*form-login*/
