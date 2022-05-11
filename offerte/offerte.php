@@ -104,86 +104,133 @@
   <!--OFFERTE-->
   <div class="grid-item">
     <a name="#off1"></a>
+
     <div class="offerta">
+
       <div class="titolo-off">
         Promo
       </div>
+
       <div class="off_bar1">
+
         <div class="img">
-          <img src="../image/offerte/offerta1.jpeg" alt="" style="width: 380px; height: 210px; border-radius: 15px;">
+          <picture>
+              <source srcset="../image/offerte/OffertaBar1.png" class="d-block w-100">
+              <img src="../image/offerte/OffertaBar1.png" alt="" class="d-block w-100" style="border-radius:15px">
+          </picture>
+          <!-- <img src="../image/offerte/OffertaBar1.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
         </div>
+
         <div class="descrizione">
-          Nei nostri cinema Ciak & Azione abbiamo la promozione giusta per ogni cliente! 
-          <br>
-          Ti piace mangiare mentre guardi i nostri film? 
-          Acquistando due biglietti ingresso, avrai a disposizione uno sconto del 20% per l'acquisto di pop corn e bibite 
-          da consumarsi al nostro bar, all'ingresso del cinema.
+          Nei nostri cinema Ciak & Azione abbiamo la promozione giusta per te! <br>
+          Tutti i mercoledì vieni nei nostri cinema e potrai acquistare un biglietto per qualsiasi film
+          più popcorn e bibita grande a soli 8€! <br>
+          Inoltre, acquistando due biglietti avrai a disposizione uno sconto del 20% per l'acquisto di un menu grande 
+          a scelta. <br>
+          Scegli il cinema più vicino a te e non farti scappare l'offerta, ti aspettiamo!
         </div> 
+
       </div>
+
       <div class="off_bar2">
+
         <div class="img">
-          <img src="../image/offerte/offerta1.jpeg" alt="" style="width: 380px; height: 210px;border-radius: 15px;">
+          <picture>
+              <source srcset="../image/offerte/OffertaBar2.png" class="d-block w-100">
+              <img src="../image/offerte/OffertaBar2.png" alt="" class="d-block w-100" style="border-radius:15px">
+          </picture>
+          <!-- <img src="../image/offerte/OffertaBar2.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
         </div>
+
         <div class="descrizione">
-        Se sei una mamma o un papà e hai almeno 1 figlio con meno di 14 anni, Ciak & Azione ti consente
-        di avere lo SCONTO FAMILY & FRIENDS tutti i giorni della settimana e per tutti i film sia 2D che 3D!
-        Da minimo 3 a 7 biglietti tutti con lo sconto, 1 o 2 adulti compresi!
+        Vi piace andare al cinema in coppia? Nessun problema, nei nostri cinema Ciak & Azione abbiamo la promozione giusta per voi! <br>
+        Venite il venerdì e potrete acquistare due biglietti per qualsiasi film e due menu grandi a scelta a solo 20€! <br>
+        Inoltre, se siete una famiglia e avete almeno un figlio con meno di 14 anni, Ciak & Azione vi consente di avere lo
+        SCONTO FAMILY, con il quale potete acquistare un terzo biglietto e un menu medio a soli 6€! <br>
+        Non perdete questa occasione, scegliete il cinema più vicino a voi!
         </div>
+
       </div>
+      
     </div>
+
   </div>
+
   <div class="grid-item">
     <a name="off2"></a>
+
       <div class="offerta">
+
         <div class="titolo-off">
           Card
         </div>
+
         <div class="off_bar1">
+
           <div class="img">
-            <img src="../image/offerte/offerta2.jpg" alt="" style="width: 380px; height: 210px; border-radius: 15px;" >
+            <picture>
+              <source srcset="../image/offerte/CiakCard.png" class="d-block w-100">
+              <img src="../image/offerte/Abbonamento.png" alt="" class="d-block w-100" style="border-radius:15px">
+            </picture>
+            <!-- <img src="../image/offerte/Abbonamento.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
           </div>
+
           <div class="descrizione">
-            Ti piace venire spesso ai nostri cinema?
-            <br>
-            Approfittane e acquista la nostra CARD abbonati che ti permette di acquistare 10 ingressi biglietto 
-            al prezzo di 8 ingressi, avendone così 2 in omaggio. <br>
-            Se sei interessato, effettua l'accesso all'area personale e prenota la tua card che potrà essere poi ritirata nei
-            nostri cinema Ciak & Azione.
-            <div class="btn-prenota" >
-              <?php
-                  if(!isset($_SESSION['nome'])){
-                    echo(" <a class='nav-link' href='../area personale/login/login.php' style='color:black; text-decoration: none;'>Prenota</a> "); 
-                  }
-                  else{
-                    echo(" <a class='nav-link' href='../area personale/profilo.php' style='color:black; text-decoration: none;'> Prenota </a>");
-                  }
-              ?> 
-            </div>
+
+            <table style="width: 100%; height: 100%">
+              <tr><td style="display:flex; margin:10px;">
+                Ti piace venire spesso nei nostri cinema? <br>
+                Approfitttane e acquista la nostra card ABBONAMENTO che ti permette di acquistare 8 ingressi e ottenerne 2 in omaggio! <br>
+                Se sei interessato iscrivi o effettua il login al sito e prenota immediatamente il tuo abbonamento, che potrai poi ritirare nel cinema più vicino a te quando preferisci! <br>
+                Offerta valida fino al 30 giugno 2022.
+              </td></tr>
+
+              <tr><td style="display: flex; justify-content:center; margin:10px;">
+                <button class="btn" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('../area personale/profilo.php'); } ?> ' " >
+                  Prenota abbonamento
+                </button>
+              </td></tr>
+
+            </table>
+
           </div>
+
         </div>
+
         <div class="off_bar2">
+
           <div class="img">
-            <img src="../image/offerte/offerta2.jpg" alt="" style="width: 380px; height: 210px; border-radius: 15px;">
+            <picture>
+              <source srcset="../image/offerte/CiakCard.png" class="d-block w-100">
+              <img src="../image/offerte/CiakCard.png" alt="" class="d-block w-100" style="border-radius:15px">
+            </picture>
+            <!-- <img src="../image/offerte/CiakCard.png" alt="" style="width:559px; height:315px; border-radius: 15px;"> -->
           </div>
+
+
           <div class="descrizione">
-          Ciak Card è la prima carta fedeltà al cinema che ti fa risparmiare davvero. <br>
-          Che tu sia un genitore, uno studente o solamente appassionato di cinema,
-          per te esiste una Ciak Card speciale con la quale puoi avere sconti in alcuni giorni o fasce orarie.
-          Con la Ciak Card ottieni punti ogni volta che vedi un film o compri un popcorn e converti questi punti 
-          in ingressi scontati o addirittura gratuiti. E i premi non finiscono alla biglietteria ma li trovi anche al bar. 
-          Cosa aspetti a farla?
-          <div class="btn-prenota" >
-              <?php
-                  if(!isset($_SESSION['nome'])){
-                    echo(" <a class='nav-link' href='../area personale/login/login.php' style='color:black; text-decoration: none;'>Prenota</a> "); 
-                  }
-                  else{
-                    echo(" <a class='nav-link' href='../area personale/profilo.php' style='color:black; text-decoration: none;'> Prenota </a>");
-                  }
-              ?> 
-            </div>
+
+            <table style="width: 100%; height: 100%">
+              <tr><td style="display:flex; margin:10px;">
+              Ciak Card è la prima carta fedeltà al cinema che ti fa risparmiare davvero. <br>
+              Che tu sia un genitore, uno studente o solamente appassionato di cinema,
+              per te esiste una Ciak Card speciale con la quale puoi avere sconti in alcuni giorni o fasce orarie.
+              Con la Ciak Card ottieni punti ogni volta che acquisti un biglietto o un menu, che ti permettono di ottenere fantasitci premi! <br> 
+              Cosa aspetti a farla? Iscriviti o effettua il login al sito e prenota subito la tua Ciak Card, che potrai poi ritirare nel cinema più vicino a te quando preferisci!
+              </td></tr>
+
+              <tr><td style="display: flex; justify-content:center; margin:10px">
+                <button class="btn" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('../area personale/profilo.php'); } ?> ' " >
+                  Prenota Ciak Card
+                </button>
+              </td></tr>
+
+            </table>
+
           </div>
+
         </div>
+
       </div>
   </div>
 

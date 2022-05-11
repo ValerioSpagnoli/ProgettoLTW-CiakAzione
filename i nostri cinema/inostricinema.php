@@ -117,8 +117,8 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCinema('SanLorenzo');">
-          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
+        <button class="btn" onclick="salvaCinema('SanLorenzo'); location.href='../programmazione/programmazione.php'">
+          Programmazione
         </button>
       </div>
 
@@ -152,8 +152,8 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCinema('Latina');">
-          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
+        <button class="btn" onclick="salvaCinema('Latina'); location.href='../programmazione/programmazione.php'">
+          Programmazione
         </button>
       </div>
 
@@ -187,8 +187,8 @@
       </div>
 
       <div class="btn-container">
-        <button class="btn" onclick="salvaCinema('Cerveteri');">
-          <a href="../programmazione/programmazione.php" style="color:black; text-decoration: none;">Programmazione</a>
+        <button class="btn" onclick="salvaCinema('Cerveteri'); location.href='../programmazione/programmazione.php'">
+          Programmazione
         </button>
       </div>
 

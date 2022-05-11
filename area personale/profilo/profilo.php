@@ -105,7 +105,7 @@ session_start();
         <div> Nome: <?php echo ($_SESSION['nome']); ?> </div>
         <div> Cognome: <?php echo ($_SESSION['cognome']); ?> </div>
         <div> Data di nascita: <?php echo ($_SESSION['datanascita']); ?> </div>
-        <div> Email: <?php echo ($_SESSION['email']); ?> </div> 
+        <div> Email: <?php echo ($_SESSION['email']); ?> </div>
       </div>
 
       <div class="azioni">
@@ -149,21 +149,48 @@ session_start();
 
 
                 echo ("<div class='riga-prenotazioni'>");
-                  echo("<div class='testo-prenotazione'>");
-                    echo($prenotazione);
-                  echo("</div>");
-                  echo("<div class='btn-prenotazione'>");
-                    echo("<a href='../php/cancellaPrenotazione.php?id=");echo($id);echo("'> <img src='../../image/icone/cestino.png' width='32px' height='32px'> </a>");
-                  echo("</div>");
+
+                  echo ("<div class='testo-prenotazione'>");
+                    echo ($prenotazione);
+                  echo ("</div>");
+
+                  echo ("<div class='btn-prenotazione'>");
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma">');
+                      echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
+                    echo("</button>");
+                  echo ("</div>");
+
                 echo ("</div>");
+
                 echo ("<hr>");
+
+
+                echo('<div class="modal fade" id="modalConferma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                  echo('<div class="modal-dialog">');
+                    echo('<div class="modal-content">');
+                      echo('<div class="modal-header">');
+                        echo('<h5 class="modal-title" id="exampleModalLabel"> Vuoi confermare la prenotazione? </h5>');
+                          echo('<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>');
+                      echo('</div>');
+                      echo('<div class="modal-body">');
+                        echo('Se confermerai verrà aggiunta la prenotazione al tuo profilo.');
+                      echo('</div>');
+                      echo('<div class="modal-footer">');
+                        echo('<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>');
+                          echo('<button type="button" class="btn btn-primary" onclick="location.href=');echo("'../php/cancellaPrenotazione.php?id=");echo($id);echo("'");echo('">Conferma</button>');
+                      echo('</div>');
+                    echo('</div>');
+                  echo('</div>');
+                echo('</div>');
+
               }
+
+        
+
             }
             ?>
 
-            
             <b> * Presenta il numero della prenotazione al cinema per acquistare i biglietti! </b>
-
 
           </div>
         </div>
