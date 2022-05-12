@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -106,6 +111,16 @@
                 </tr>
 
                 <tr><td><br></td></tr>
+
+                <tr>
+                    <td>
+                      <?php 
+                        if($_GET['errore']==1){
+                          echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Errore in fase di registrazione. </div>');
+                        }
+                      ?>
+                    </td>
+                </tr>
 
                 <tr>
                     <td>Nome:</td>

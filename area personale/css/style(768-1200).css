@@ -100,12 +100,12 @@
     border-bottom: solid 2px black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 1%;
+    padding: 10px;
     background-color: rgba(122, 122, 122, 0.763);
 }
 .sezione-abbonamenti{
     font-size: 15px;
-    padding: 1%;
+    padding: 10px;
 }
 
 .tit-prenotazioni{
@@ -114,12 +114,12 @@
     border-bottom: solid 2px black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 1%;
+    padding: 10px;
     background-color: rgba(122, 122, 122, 0.763);
 }
 .sezione-prenotazioni{
     font-size: 15px;
-    padding: 1%;
+    padding: 10px;
 }
 
 /* PROFILO */

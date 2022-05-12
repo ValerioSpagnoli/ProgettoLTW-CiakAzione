@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -105,6 +109,19 @@
                     </tr>
 
                     <tr><td><br></td></tr>
+
+                    <tr>
+                      <td>
+                        <?php 
+                          if($_GET['pswdErrata']==1){
+                            echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Password errata! </div>');
+                          }
+                          else if($_GET['emailErrata']==1){
+                            echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email errata! </div>');
+                          }
+                        ?>
+                      </td>
+                    </tr>
 
                     <tr>
                         <td>Email:</td>

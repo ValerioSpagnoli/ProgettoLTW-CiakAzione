@@ -169,7 +169,7 @@
 
           <div class="img">
             <picture>
-              <source srcset="../image/offerte/CiakCard.png" class="d-block w-100">
+              <source srcset="../image/offerte/Abbonamento.png" class="d-block w-100">
               <img src="../image/offerte/Abbonamento.png" alt="" class="d-block w-100" style="border-radius:15px">
             </picture>
             <!-- <img src="../image/offerte/Abbonamento.png" alt="" style="max-width:100%; border-radius: 15px;"> -->

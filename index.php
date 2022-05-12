@@ -230,9 +230,9 @@
         <br>
         Ciak & Azione San Lorenzo - Via dello Scalo 64
         <br>
-        Ciak & Azione San Lorenzo - Via dello Scalo 64
+        Ciak & Azione Latina - Via delle Margherite 12
         <br>
-        Ciak & Azione San Lorenzo - Via dello Scalo 66
+        Ciak & Azione Cerveteri - Via delle Viole 22
       </div>
 
     </div>

@@ -5,13 +5,10 @@ Progetto di Linguaggi e Tecnologie per il Web: creazione di un sito per la caten
 pagina offerte (form abbonamento), abbonamenti in profilo
 recensioni sotto i film
 profilo
-sistemare errori di login
 
-inserire avatare del profilo
-chiudere le connessioni al database
+inserire avatar del profilo
 
 controllare riferimenti e descrizioni
-modificare immagini offerte
 
 recupero password
 

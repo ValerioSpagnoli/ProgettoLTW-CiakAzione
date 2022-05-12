@@ -9,7 +9,6 @@ session_start();
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://unpkg.com/vue@3.2.33/dist/vue.global.js"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -21,16 +20,6 @@ session_start();
   <link rel="stylesheet" href="./css/style(1200).css" media="screen and (min-width: 1200px)">
 
   <title>Ciak & Azione</title>
-
-
-
-  <?php
-
-
-
-
-  ?>
-
 
 </head>
 
@@ -129,7 +118,6 @@ session_start();
     <div class="locandine">
   
       <?php
-
       $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
         or die('Could not connect: ' . pg_last_error());
 
@@ -145,27 +133,26 @@ session_start();
 
           echo ("<div id='"); echo ($disponibile); echo ("'>");
             echo ("<a href='../film/film.php?titolo="); echo ($titolo); echo ("' style='color: rgb(156, 101, 0); text-decoration: none; font-family: 'Vollkorn', serif;' onclick='salvaCinema();'> ");
-            echo ("
-              <table>
-                <tr>
-                  <td style='display: flex; justify-content: center;'> ");
-              echo ("<img class='img-loc' src='"); echo ($locandina); echo ("' width='80%' height='80%'>");
-              echo ("
-                  </td>
-                </tr>
-                <tr>
-                  <td style='display: flex; justify-content: center; margin-bottom: 30px'>
-                    <footer class='footer-locandine'>");   
+              echo ("<table>");
+                echo("<tr>");
+                  echo("<td style='display: flex; justify-content: center;'> ");
+                    echo ("<img class='img-loc' src='"); echo ($locandina); echo ("' width='80%' height='80%'>");
+                  echo ("</td>");
+                echo("</tr>");
+                echo("<tr>");                 
+                echo("<td style='display: flex; justify-content: center; margin-bottom: 30px'>");
+                    echo("<footer class='footer-locandine'>");   
                       echo ($titolo);
-              echo ("
-                    </footer>
-                  </td>
-                </tr>
-              </table>
-            </a>
-          </div> ");
-
+                    echo ("</footer>");
+                  echo("</td>");
+                echo("</tr>");
+              echo("</table>");
+              echo("</a>");
+          echo("</div>");
         }
+
+        pg_free_result($result1);
+        pg_close($dbconn);
       }
 
       ?>

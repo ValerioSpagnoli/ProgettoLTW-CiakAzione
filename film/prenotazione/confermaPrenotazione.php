@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
 
@@ -17,14 +16,15 @@
 
         $postiOrario = '';
         if ($orario == '15:00') {
-            $postiOrario = 'posti1530';
-        } else if ($orario == '17:30') {
+            $postiOrario = 'posti1500';
+        } 
+        else if ($orario == '17:30') {
             $postiOrario = 'posti1730';
         }
-        if ($orario == '20:00') {
+        else if ($orario == '20:00') {
             $postiOrario = 'posti2000';
         }
-        if ($orario == '22:30') {
+        else if ($orario == '22:30') {
             $postiOrario = 'posti2230';
         }
 
@@ -45,6 +45,10 @@
         $query4 = "INSERT INTO prenotazioni VALUES ($id, '$email', '$titolo', '$orario', '$cinema', '$sala', '$postiSelezionati') ";
         $result4 = pg_query($query4) or die(pg_last_error());
 
+
+        pg_free_result($result2);
+        pg_free_result($result4);
+        pg_close($dbconn);
         header('Location: ../../area personale/profilo/profilo.php');
     }
 

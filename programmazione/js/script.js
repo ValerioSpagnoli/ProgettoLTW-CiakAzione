@@ -61,6 +61,24 @@ function filter(){
         $("#sanlorenzo-latina").show();
         $("#cerveteri-latina").show();
     }
+
+    scriviCookie();
+}
+
+
+function scriviCookie(){
+    var x = document.getElementById("scelta");
+    var indice = x.selectedIndex;
+
+    var valoreSelezionato = x.options[indice];
+    var valoreOpzione = valoreSelezionato.value;
+
+    console.log("Programmazione->scriviCookie: valoreOpzione = " + valoreOpzione);
+
+    var scadenza = new Date();
+    var adesso = new Date();
+    scadenza.setTime(adesso.getTime() + (parseInt(1) * 86400000));
+    document.cookie = "cinema=" + valoreOpzione + '; expires=' + scadenza.toGMTString() + '; path=/';
 }
 
 

@@ -91,13 +91,6 @@ session_start();
 
 
   <?php
-  // if (!(isset($_POST['scelta']))) {
-  //   header("Location: ../programmazione/programmazione.php");
-  // } else {
-  //   $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
-  //     or die('Could not connect: ' . pg_last_error());
-  // }
-
   $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres")
     or die('Could not connect: ' . pg_last_error());
 
@@ -126,13 +119,15 @@ session_start();
     $_SESSION['trailer'] = $array1['trailer'];
     $_SESSION['disponibile'] = $array1['disponibile'];
 
-    $_SESSION['posti1500'] = $array2['posti1530'];
+    $_SESSION['posti1500'] = $array2['posti1500'];
     $_SESSION['posti1730'] = $array2['posti1730'];
     $_SESSION['posti2000'] = $array2['posti2000'];
     $_SESSION['posti2230'] = $array2['posti2230'];
     $_SESSION['sala'] = $array2['sala'];
 
     $_SESSION['cinema'] = $cinema;
+
+    pg_close($dbconn);
   }
 
   ?>
@@ -250,7 +245,7 @@ session_start();
           <button class="btn" name="btn-15:00" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
                                                                                         echo('../area personale/login/login.php');
                                                                                       } else {
-                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=15:00');
+                                                                                        echo ('./prenotazione/prenotazione.php?orario=15:00');
                                                                                       } ?> ' " 
                                                                                       <?php if ($_SESSION['posti1500'] == 0) {
                                                                                                 echo ('disabled');} ?>>
@@ -262,7 +257,7 @@ session_start();
           <button class="btn" name="btn-17:30" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) {
                                                                                         echo('../area personale/login/login.php');
                                                                                       } else {
-                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=17:30');
+                                                                                        echo ('./prenotazione/prenotazione.php?orario=17:30');
                                                                                       } ?> '"
                                                                                       <?php if ($_SESSION['posti1730'] == 0) {
                                                                                                 echo ('disabled');} ?>>
@@ -274,7 +269,7 @@ session_start();
           <button class="btn" name="btn-20:00" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
                                                                                         echo('../area personale/login/login.php');
                                                                                       } else {
-                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=20:00');
+                                                                                        echo ('./prenotazione/prenotazione.php?orario=20:00');
                                                                                       } ?>'"
                                                                                       <?php if ($_SESSION['posti2000'] == 0) {
                                                                                                 echo ('disabled');} ?>>
@@ -286,7 +281,7 @@ session_start();
           <button class="btn" name="btn-22:30" type="submit" onclick="location.href='<?php if (!isset($_SESSION['nome'])) {
                                                                                         echo('../area personale/login/login.php');
                                                                                       } else {
-                                                                                        echo ('./prenotazione/prenotazioneLog.php?orario=22:30');
+                                                                                        echo ('./prenotazione/prenotazione.php?orario=22:30');
                                                                                       } ?>'"
                                                                                       <?php if ($_SESSION['posti2230'] == 0) {
                                                                                                 echo ('disabled');} ?>>

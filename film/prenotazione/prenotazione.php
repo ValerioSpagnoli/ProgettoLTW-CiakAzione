@@ -54,8 +54,7 @@ session_start();
 
 
             <div class="img-pren">
-                <img src="  <?php echo ('../');
-                            echo ($_SESSION['locandina']) ?> " alt="" width="239px" height="358px">
+                <img src="  <?php echo ('../');echo ($_SESSION['locandina']) ?> " alt="" width="239px" height="358px">
             </div>
 
 
