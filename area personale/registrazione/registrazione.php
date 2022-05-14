@@ -115,8 +115,13 @@
                 <tr>
                     <td>
                       <?php 
-                        if($_GET['errore']==1){
-                          echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Errore in fase di registrazione. </div>');
+                        if(isset($_GET['errore'])){
+                          if($_GET['errore']==1){
+                            echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email già in uso. </div>');
+                          }
+                          if($_GET['errore']==2){
+                            echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> I due campi password e conferma password non coincidono. </div>');
+                          }
                         }
                       ?>
                     </td>
@@ -163,6 +168,15 @@
                 </tr>
                 <tr>
                     <td><input name="password" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required></td>
+                </tr>
+
+                <tr><td><br></td></tr>
+
+                <tr>
+                    <td>Conferma Password:</td>
+                </tr>
+                <tr>
+                    <td><input name="confermapassword" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required></td>
                 </tr>
 
                 <tr><td><br></td></tr>

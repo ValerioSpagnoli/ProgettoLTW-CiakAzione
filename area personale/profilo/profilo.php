@@ -98,7 +98,38 @@ session_start();
       </div>
 
       <div class="foto">
-        <img src="../../image/profilo/foto_profilo.jpeg" width="150px" height="150px" style="margin:20px">
+        <center>
+        <img src="../../image/avatar/default.jpeg" width="150px" height="150px" style="margin:20px">
+        <footer class="footer">
+          <button class="btn-avatar" data-bs-toggle="modal" data-bs-target="#modalAvatar" >
+              Scegli avatar
+          </button>
+          <div class="modal fade" id="modalAvatar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog" >
+                <div class="modal-content" >
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Vuoi cambiare il tuo avatar del profilo? </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <center>
+                    <img src="../../image/avatar/donna.jpg" width="150px" height="150px" style="margin:20px">
+                    <img src="../../image/avatar/uomo.jpg" width="150px" height="150px" style="margin:20px">
+                    <img src="../../image/avatar/default.jpeg" width="150px" height="150px" style="margin:20px">
+                    </center>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='#'">Cambia</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <button class="btn-foto" > 
+            Scegli foto
+          </button>
+        </footer>
+        </center>
       </div>
 
       <div class="dati">

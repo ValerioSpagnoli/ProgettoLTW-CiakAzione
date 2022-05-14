@@ -9,21 +9,22 @@ else {
 
 if($dbconn){
     $email = $_POST['email'];
+    $nome = $_POST['nome'];
+    $cognome = $_POST['cognome'];
+    $datanascita = $_POST['datanascita'];
+    $password = md5($_POST['password']);
+    $confermapassword= md5($_POST['confermapassword']);
     $query1 = "SELECT * FROM utenti WHERE email = $1";
     $result = pg_query_params($dbconn, $query1, array($email));
 
     if ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-        echo("Sei già registrato con questa email. Clicca <a href=../login/login.php> qui </a> per effettuare il login!");
+        header('Location: ../registrazione/registrazione.php?errore=1');
     }
-
+    else if($_POST['password']!=$_POST['confermapassword']){
+        header('Location: ../registrazione/registrazione.php?errore=2');
+    }
     else {
-        $nome = $_POST['nome'];
-        $cognome = $_POST['cognome'];
-        $datanascita = $_POST['datanascita'];
-        $password = md5($_POST['password']);
-
         $query2 = "INSERT INTO utenti VALUES ($1,$2,$3,$4,$5)";
-
         $data = pg_query_params($dbconn, $query2, array($nome, $cognome, $datanascita, $email, $password));
 
         if ($data) {
@@ -36,7 +37,7 @@ if($dbconn){
             pg_free_result($result);
             pg_free_result($data);
             pg_close($dbconn);
-            header('Location: ../registrazione/registrazione.php?errore=1');
+            header('Location: ../../index.php');
         }
     } 
 

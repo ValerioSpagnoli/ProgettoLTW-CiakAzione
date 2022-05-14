@@ -113,12 +113,16 @@
                     <tr>
                       <td>
                         <?php 
+                         if(isset($_GET['pswdErrata'])){
                           if($_GET['pswdErrata']==1){
                             echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Password errata! </div>');
                           }
-                          else if($_GET['emailErrata']==1){
+                         }
+                         if(isset($_GET['emailErrata'])){
+                          if($_GET['emailErrata']==1){
                             echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email errata! </div>');
                           }
+                         }
                         ?>
                       </td>
                     </tr>
