@@ -28,3 +28,12 @@ function validaRegistrazione(){
     }
 }
 
+function cambiaAvatar(foto){
+    if(foto=="../../image/avatar/donna.jpg")
+        window.location.href='../profilo/avatar/avatar1.php';
+    else if(foto=="../../image/avatar/uomo.jpg")
+        window.location.href='../profilo/avatar/avatar2.php';
+    else 
+        window.location.href='../profilo/avatar/avatar3.php';
+}
+

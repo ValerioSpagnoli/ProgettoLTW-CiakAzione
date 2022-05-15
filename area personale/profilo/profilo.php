@@ -99,7 +99,18 @@ session_start();
 
       <div class="foto">
         <center>
-        <img src="../../image/avatar/default.jpeg" width="150px" height="150px" style="margin:20px">
+        <?php 
+          $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
+            or die('Could not connect: ' . pg_last_error());
+          if ($dbconn) {
+            $email = $_SESSION['email'];
+            $query1 = "SELECT * FROM utenti WHERE email= $1";
+            $result = pg_query_params($dbconn, $query1, array($email));
+            $array = pg_fetch_array($result, null, PGSQL_ASSOC);
+            $img=$array['img'];
+            echo("<img src='$img' width='150px' height='150px' style='margin:20px'>");
+          }
+        ?>
         <footer class="footer">
           <button class="btn-avatar" data-bs-toggle="modal" data-bs-target="#modalAvatar" >
               Scegli avatar
@@ -113,14 +124,22 @@ session_start();
                   </div>
                   <div class="modal-body">
                     <center>
-                    <img src="../../image/avatar/donna.jpg" width="150px" height="150px" style="margin:20px">
-                    <img src="../../image/avatar/uomo.jpg" width="150px" height="150px" style="margin:20px">
-                    <img src="../../image/avatar/default.jpeg" width="150px" height="150px" style="margin:20px">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: none; border:none" 
+                    onclick="cambiaAvatar('../../image/avatar/donna.jpg')">
+                      <img src="../../image/avatar/donna.jpg" width="150px" height="150px" >
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: none; border:none"
+                    onclick="cambiaAvatar('../../image/avatar/uomo.jpg')">
+                      <img src="../../image/avatar/uomo.jpg" width="150px" height="150px" style="margin:20px">
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: none; border:none"
+                    onclick="cambiaAvatar('../../image/avatar/default.jpeg')">
+                      <img src="../../image/avatar/default.jpeg" width="150px" height="150px" style="margin:20px">
+                    </button>
                     </center>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                    <button type="button" class="btn btn-primary" onclick="location.href='#'">Cambia</button>
                   </div>
                 </div>
             </div>
@@ -259,7 +278,7 @@ session_start();
 
 
 
-
+  <script src="../js/script.js"></script>
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->

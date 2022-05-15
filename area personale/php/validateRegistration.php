@@ -24,7 +24,7 @@ if($dbconn){
         header('Location: ../registrazione/registrazione.php?errore=2');
     }
     else {
-        $query2 = "INSERT INTO utenti VALUES ($1,$2,$3,$4,$5)";
+        $query2 = "INSERT INTO utenti VALUES ($1,$2,$3,$4,$5,'../../image/avatar/default.jpeg')";
         $data = pg_query_params($dbconn, $query2, array($nome, $cognome, $datanascita, $email, $password));
 
         if ($data) {
