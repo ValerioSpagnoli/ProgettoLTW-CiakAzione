@@ -123,10 +123,13 @@
                             echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email errata! </div>');
                           }
                          }
+                         if(isset($_GET['successo'])){
+                          echo('<div style="display:flex; justify-content:center; color: rgb(32, 150, 8);; font-size: 20px;"> Registrazione avvenuta con successo! </div>');
+                         }
                         ?>
                       </td>
                     </tr>
-
+                        
                     <tr>
                         <td>Email:</td>
                     </tr>

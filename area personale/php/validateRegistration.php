@@ -31,7 +31,7 @@ if($dbconn){
             pg_free_result($result);
             pg_free_result($data);
             pg_close($dbconn);
-            header('Location: ../login/login.php');
+            header('Location: ../login/login.php?successo=1');
         }
         else{
             pg_free_result($result);

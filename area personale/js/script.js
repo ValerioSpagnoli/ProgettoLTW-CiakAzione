@@ -8,7 +8,7 @@ function validaRegistrazione(){
     for(var i=0; i<cognome.length; i++){
         test= cognome.charAt(i);
         console.log(test);
-        if(!isNaN(test)){
+        if(!isNaN(test) && test!=' '){
             alert("Inserire solo caratteri alfabetici nel cognome");
             return false;
         }

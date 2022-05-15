@@ -134,7 +134,7 @@ session_start();
               $result = pg_query_params($dbconn, $query1, array($email));
               $array = pg_fetch_array($result, null, PGSQL_ASSOC);
               $img=$array['img'];
-              echo("<img src='$img' width='150px' height='150px' style='margin:20px'>");
+              echo("<img src='$img' width='150px' height='auto' style='margin:20px'>");
             }
           }
         ?>
@@ -189,6 +189,9 @@ session_start();
                 <form action="../php/caricaFoto.php" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">  
                   <input type="file" value="scegli immagine" name="image"/>
+                  <br>
+                  <br>
+                  Le estensioni ammesse sono .jpg .jpeg .png .gif
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
