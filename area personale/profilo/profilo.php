@@ -99,17 +99,43 @@ session_start();
 
       <div class="foto">
         <center>
+        <?php
+          if(isset($_GET['errore'])){
+            $errore = $_GET['errore'];
+            if($errore == 1){
+              echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> File caricato in modo non corretto. </div>');
+            }
+            else if($errore == 2){
+              echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Estensione del file non ammessa. </div>');
+            }
+            else if($errore == 3){
+              echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Dimensione del file troppo grande. </div>');
+            }
+            else if($errore == 4){
+              echo('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Non è stato possibile caricare la foto. </div>');
+            }
+          }
+
+        ?>
+      
+        <br>
 
         <?php 
-          $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
-            or die('Could not connect: ' . pg_last_error());
-          if ($dbconn) {
-            $email = $_SESSION['email'];
-            $query1 = "SELECT * FROM utenti WHERE email= $1";
-            $result = pg_query_params($dbconn, $query1, array($email));
-            $array = pg_fetch_array($result, null, PGSQL_ASSOC);
-            $img=$array['img'];
+          if(isset($_GET['errore'])){
+            $img = "../../image/avatar/default.jpeg";
             echo("<img src='$img' width='150px' height='150px' style='margin:20px'>");
+          }
+          else{
+            $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
+            or die('Could not connect: ' . pg_last_error());
+            if ($dbconn) {
+              $email = $_SESSION['email'];
+              $query1 = "SELECT * FROM utenti WHERE email= $1";
+              $result = pg_query_params($dbconn, $query1, array($email));
+              $array = pg_fetch_array($result, null, PGSQL_ASSOC);
+              $img=$array['img'];
+              echo("<img src='$img' width='150px' height='150px' style='margin:20px'>");
+            }
           }
         ?>
 
@@ -149,9 +175,29 @@ session_start();
             </div>
           </div>
 
-          <button class="btn btn-foto"> 
+          <button class="btn btn-foto" data-bs-toggle="modal" data-bs-target="#modalFoto"> 
             Scegli foto
           </button>
+
+          <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"> Scegli la tua foto profilo! </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="../php/caricaFoto.php" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">  
+                  <input type="file" value="scegli immagine" name="image"/>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                  <button type="submit" class="btn btn-primary">Conferma</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
 
         </footer>
         </center>
