@@ -118,7 +118,6 @@
               <source srcset="../image/offerte/OffertaBar1.png" class="d-block w-100">
               <img src="../image/offerte/OffertaBar1.png" alt="" class="d-block w-100" style="border-radius:15px">
           </picture>
-          <!-- <img src="../image/offerte/OffertaBar1.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
         </div>
 
         <div class="descrizione">
@@ -139,7 +138,6 @@
               <source srcset="../image/offerte/OffertaBar2.png" class="d-block w-100">
               <img src="../image/offerte/OffertaBar2.png" alt="" class="d-block w-100" style="border-radius:15px">
           </picture>
-          <!-- <img src="../image/offerte/OffertaBar2.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
         </div>
 
         <div class="descrizione">
@@ -172,7 +170,6 @@
               <source srcset="../image/offerte/Abbonamento.png" class="d-block w-100">
               <img src="../image/offerte/Abbonamento.png" alt="" class="d-block w-100" style="border-radius:15px">
             </picture>
-            <!-- <img src="../image/offerte/Abbonamento.png" alt="" style="max-width:100%; border-radius: 15px;"> -->
           </div>
 
           <div class="descrizione">
@@ -186,9 +183,36 @@
               </td></tr>
 
               <tr><td style="display: flex; justify-content:center; margin:10px;">
-                <button class="btn" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('../area personale/profilo.php'); } ?> ' " >
+                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaAbbonamento">
                   Prenota abbonamento
                 </button>
+
+                <div class="modal fade" id="modalConfermaAbbonamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Vuoi confermare la prenotazione dell'abbonamento? </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Seleziona il cinema dove vuoi ritirare l'abbonamento:
+                        <br>
+                        <select id="sceltaAbbonamento" name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
+                          <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
+                          <option value="Latina">Ciak & Azione Latina</option>
+                          <option value="Cerveteri">Ciak & Azione Cerveteri</option>
+                        </select>
+                        <br>
+                        <br>
+                        Se confermerai verrà aggiunta la prenotazione al tuo profilo e potrai ritirare l'abbonamento nel cinema da te selezionato quando preferisci!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-primary" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('./php/confermaCard.php?card=Abbonamento'); } ?>'; confermaPrenotazione('Abbonamento');">Conferma</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </td></tr>
 
             </table>
@@ -204,7 +228,6 @@
               <source srcset="../image/offerte/CiakCard.png" class="d-block w-100">
               <img src="../image/offerte/CiakCard.png" alt="" class="d-block w-100" style="border-radius:15px">
             </picture>
-            <!-- <img src="../image/offerte/CiakCard.png" alt="" style="width:559px; height:315px; border-radius: 15px;"> -->
           </div>
 
 
@@ -220,9 +243,37 @@
               </td></tr>
 
               <tr><td style="display: flex; justify-content:center; margin:10px">
-                <button class="btn" type="submit" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('../area personale/profilo.php'); } ?> ' " >
+                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaCiakCard">
                   Prenota Ciak Card
                 </button>
+
+                <div class="modal fade" id="modalConfermaCiakCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Vuoi confermare la prenotazione della Ciak Card? </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      Seleziona il cinema dove vuoi ritirare la Ciak Card:
+                        <br>
+                        <select id="sceltaCiakCard" name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
+                          <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
+                          <option value="Latina">Ciak & Azione Latina</option>
+                          <option value="Cerveteri">Ciak & Azione Cerveteri</option>
+                        </select>
+                        <br>
+                        <br>
+                        Se confermerai verrà aggiunta la prenotazione al tuo profilo e potrai ritirare la Ciak Card nel cinema da te selezionato quando preferisci!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-primary" onclick="location.href=' <?php if (!isset($_SESSION['nome'])) { echo('../area personale/login/login.php'); } else { echo ('./php/confermaCard.php?card=CiakCard'); } ?>'; confermaPrenotazione('CiakCard'); ">Conferma</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </td></tr>
 
             </table>
@@ -246,6 +297,7 @@
   </footer>
 
 
+  <script src="./js/script.js"></script>
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -3,5 +3,6 @@ create table utenti(
 	cognome varchar(50),
 	datanascita varchar(20),
 	email varchar(100) primary key,
-	pswd varchar(50)
+	pswd varchar(50),
+	img varchar(300)
 )	
