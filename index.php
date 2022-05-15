@@ -210,11 +210,11 @@
       <div class="storia">
         Ciak & azione nasce nell'aprile del 2022 dallo sviluppo di un progetto universitario.
         <br>
-        Questo nuovo circuito è composto da 3 cinema per un totale di (num sale totale) sale moderne e un totale di
-        (posti totali), tutte
+        Questo nuovo circuito è composto da 3 cinema ognuno composto da 3 sale moderne, ciascuna con
+        150 posti, tutte
         con una disposizione ad anfiteatro.
         <br>
-        L'obiettivo prefissato dai 3 fondatori è quello di porre al centro del
+        L'obiettivo prefissato dai tre fondatori è quello di porre al centro del
         proprio lavoro lo spettatore a cui offrire la migliore esperienza cinematografica possibile sia per quanto
         riguarda la struttura che l'accoglienza offerta.
       </div>
