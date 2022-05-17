@@ -145,6 +145,7 @@ session_start();
       </div>
 
       <div class="locandine">
+      <center><div class='scritta' style="font-family: 'Vollkorn', serif;">Recensione della critica </div> </center>
         <div class="star">
           <?php 
             $star=$_SESSION['star'];

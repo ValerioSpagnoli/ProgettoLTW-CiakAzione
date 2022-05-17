@@ -249,7 +249,7 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma1">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -258,7 +258,7 @@ session_start();
 
                 echo ("<hr>");
 
-                echo('<div class="modal fade" id="modalConferma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalConferma1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');
@@ -318,7 +318,7 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma2">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -328,7 +328,7 @@ session_start();
                 echo ("<hr>");
 
 
-                echo('<div class="modal fade" id="modalConferma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalConferma2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');
