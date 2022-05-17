@@ -70,13 +70,23 @@
 
 
 /* PROFILO */
+.dati{
+    grid-area: b;
+    display: flex;
+    margin: 20px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
 .profilo{
     display: grid;
     grid-template: 
-    't t'
-    'a b' 
-    'c c';
-    grid-template-columns: 1fr 1fr;
+    't'
+    'a'
+    'b' 
+    'c';
+    grid-template-columns: 1fr;
     font-family: 'Vollkorn', serif;
     margin: 4%;
     background-color: rgba(155, 155, 155, 0.651);

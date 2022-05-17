@@ -70,6 +70,15 @@
 
 
 /* PROFILO */
+.dati{
+    grid-area: b;
+    display: flex;
+    margin: 20px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: start;
+}
+
 .profilo{
     display: grid;
     grid-template: 

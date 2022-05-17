@@ -12,12 +12,11 @@
 
 .body{
     background-image: url(../../image/sfondo/sfondo.jpg);
-    display: grid;   
+    display: grid;  
+    grid-template-columns: 1fr; 
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr;
 }
-
 
 .grid-item-navbar{
     width: 100%;
@@ -41,12 +40,6 @@
     height: 100%;
     justify-content:center ;
     align-items:center ;
-}
-
-.dati{
-    grid-area: b;
-    margin: 20px;
-    font-size: 20px;
 }
 
 .azioni{

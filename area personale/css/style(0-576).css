@@ -11,7 +11,7 @@
 
 
 .body{
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows:  1fr auto auto;
 }
 
 
@@ -69,6 +69,15 @@
 
 
 /* PROFILO */
+.dati{
+    grid-area: b;
+    display: flex;
+    margin: 20px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
 .profilo{
     display: grid;
     grid-template: 

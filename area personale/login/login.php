@@ -174,14 +174,13 @@
 
 
 
-
   <!-- FOOTER -->
   <footer class="footer" style="background-color: rgba(81, 81, 81, 0.705);  text-align: center; font-family: 'Vollkorn', serif; margin-top: 3%;">
 
     <a href="#top"><img src="../../image/logo/logo.png" width="50px" height="50px" alt=""></a>
     <br>
     <span style="color: rgb(220, 220, 217);">Ciak&Azione 2022©Tutti i diritti riservati.</span>
-    
+        
 
   </footer>
 

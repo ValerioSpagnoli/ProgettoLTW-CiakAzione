@@ -134,34 +134,5 @@
     height: 100%;
 }
 
-.btn-conferma{
-    background-color: rgba(217, 217, 217, 0.916);
-    font-family: 'Vollkorn', serif;
-    border: solid 3px rgba(217, 217, 217, 0.916);
-    border-radius: 10px;
-    margin: 5px;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.btn-annulla{
-    background-color: rgba(217, 217, 217, 0.916);
-    font-family: 'Vollkorn', serif;
-    border: solid 3px rgba(217, 217, 217, 0.916);
-    border-radius: 10px;
-    margin: 5px;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.btn-conferma:hover{
-    border: solid 3px rgb(0, 158, 0);
-    transition-duration: 0.6s;
-}
-
-.btn-annulla:hover{
-    border: solid 3px rgb(175, 0, 0);
-    transition-duration: 0.6s;
-}
 /*prenotazione*/
 

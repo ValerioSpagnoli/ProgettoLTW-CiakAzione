@@ -145,8 +145,21 @@ session_start();
       </div>
 
       <div class="locandine">
-      <center><div class='scritta' style="font-family: 'Vollkorn', serif;">Recensione della critica </div> </center>
-        <div class="star">
+        <div class="img">
+          <table>
+            <tr>
+              <td>
+                <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <center><div class='scritta' style="font-family: 'Vollkorn', serif; margin-top: 20px">Recensione della critica </div> </center>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <div class="star">
           <?php 
             $star=$_SESSION['star'];
             if($star==1){
@@ -186,8 +199,11 @@ session_start();
             }
           ?>
         </div>
-        <div class="img">
-          <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
+              </td>
+            </tr>
+          </table>
+          
+            
         </div>
       </div>
 

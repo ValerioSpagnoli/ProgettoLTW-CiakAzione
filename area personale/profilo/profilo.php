@@ -123,7 +123,7 @@ session_start();
         <?php 
           if(isset($_GET['errore'])){
             $img = "../../image/avatar/default.jpeg";
-            echo("<img src='$img' width='150px' height='150px' style='margin:20px'>");
+            echo("<img src='$img' width='250px' height='auto' style='margin:20px'>");
           }
           else{
             $dbconn = pg_connect("host=localhost port=5432 dbname=Ciak&Azione user=postgres password=postgres") 
@@ -134,7 +134,7 @@ session_start();
               $result = pg_query_params($dbconn, $query1, array($email));
               $array = pg_fetch_array($result, null, PGSQL_ASSOC);
               $img=$array['img'];
-              echo("<img src='$img' width='150px' height='auto' style='margin:20px'>");
+              echo("<img src='$img' width='250px' height='auto' style='margin:20px; max-height: 250px;'>");
             }
           }
         ?>
@@ -208,10 +208,10 @@ session_start();
       </div>
 
       <div class="dati">
-        <div> Nome: <?php echo ($_SESSION['nome']); ?> </div>
-        <div> Cognome: <?php echo ($_SESSION['cognome']); ?> </div>
-        <div> Data di nascita: <?php echo ($_SESSION['datanascita']); ?> </div>
-        <div> Email: <?php echo ($_SESSION['email']); ?> </div>
+        Nome: <?php echo ($_SESSION['nome']); ?> <br>
+        Cognome: <?php echo ($_SESSION['cognome']); ?> <br>
+        Data di nascita: <?php echo ($_SESSION['datanascita']); ?> <br>
+        Email: <?php echo ($_SESSION['email']); ?> 
       </div>
 
       <div class="azioni">
@@ -249,7 +249,7 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma1">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma'); echo($id); echo('">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -258,7 +258,7 @@ session_start();
 
                 echo ("<hr>");
 
-                echo('<div class="modal fade" id="modalConferma1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalConferma'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');
@@ -318,7 +318,7 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma2">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma'); echo($id); echo('">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -328,7 +328,7 @@ session_start();
                 echo ("<hr>");
 
 
-                echo('<div class="modal fade" id="modalConferma2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalConferma'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');

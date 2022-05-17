@@ -196,12 +196,12 @@ session_start();
                 <table>
                     <tr>
                         <td>
-                            <button class="btn-annulla" onClick="history.go(-1);return true;">
+                            <button class="btn" onClick="history.go(-1);return true;">
                                 Annulla
                             </button>
                         </td>
                         <td>
-                            <button class="btn-conferma" data-bs-toggle="modal" data-bs-target="#modalConferma" onclick="confermaPrenotazione();">
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#modalConferma" onclick="confermaPrenotazione();">
                                 Conferma
                             </button>
 

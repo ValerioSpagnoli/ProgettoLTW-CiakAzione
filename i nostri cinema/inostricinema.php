@@ -125,9 +125,9 @@
       <div class="descrizione">
         Cerchi un cinema a Roma? Vieni da Ciak & Azione San Lorenzo, in Via dello Scalo 64.
         <br>
-        Il cinema, che si trova nel cuore della Capitale, è dotato di 3 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
+        Il cinema, che si trova nel cuore della Capitale, è dotato di 4 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
         <br>
-        Tra i servizi anche un’area relax, il bar con angolo caramelle e uno spazio per organizzare feste di compleanno.
+        Tra i servizi anche un’area relax, area ristoro in cui puoi anche organizzare feste di compleanno.
         Controlla i film in programmazione al multisala di San Lorenzo e scegli il tuo preferito!
       </div>
 
@@ -160,10 +160,10 @@
       <div class="descrizione">
         Cerchi un cinema a Latina? Vieni da Ciak & Azione Latina, in Via delle Margherite 12.
         <br>
-        Il cinema, che si trova al centro di questo splendido capoluogo, è dotato di 3 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
+        Il cinema, che si trova al centro di questo splendido capoluogo, è dotato di 4 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
         <br>
-        Tra i servizi anche un’area relax, il bar con angolo caramelle e uno spazio per organizzare feste di compleanno.
-        Controlla i film in programmazione al multisala di San Lorenzo e scegli il tuo preferito!
+        Tra i servizi anche un’area relax, area ristoro in cui puoi anche organizzare feste di compleanno.
+        Controlla i film in programmazione al multisala di Latina e scegli il tuo preferito!
       </div>
 
     </div>
@@ -195,10 +195,10 @@
       <div class="descrizione">
         Cerchi un cinema a Cerveteri e dintorni? Vieni da Ciak & Azione Cerveteri, in Via delle Viole 22.
         <br>
-        Il cinema, che si trova nella città etrusca, è dotato di 3 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
+        Il cinema, che si trova nella città etrusca, è dotato di 4 sale dotate delle migliori tecnologie per offrirti un'esperienza unica!
         <br>
-        Tra i servizi anche un’area relax, il bar con angolo caramelle e uno spazio per organizzare feste di compleanno.
-        Controlla i film in programmazione al multisala di San Lorenzo e scegli il tuo preferito!
+        Tra i servizi anche un’area relax, area ristoro in cui puoi anche organizzare feste di compleanno.
+        Controlla i film in programmazione al multisala di Cerveteri e scegli il tuo preferito!
       </div>
 
     </div>
