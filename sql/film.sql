@@ -10,5 +10,6 @@ create table film(
 	trama varchar(1000),
 	locandina varchar(100),
 	trailer varchar(200),
-	disponibile varchar(100)
+	disponibile varchar(100),
+	star numeric
 )	

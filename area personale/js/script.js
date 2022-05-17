@@ -30,10 +30,10 @@ function validaRegistrazione(){
 
 function cambiaAvatar(foto){
     if(foto=="../../image/avatar/donna.jpg")
-        window.location.href='../profilo/avatar/avatar1.php';
+        window.location.href='../profilo/avatar/avatar.php?img=1';
     else if(foto=="../../image/avatar/uomo.jpg")
-        window.location.href='../profilo/avatar/avatar2.php';
+        window.location.href='../profilo/avatar/avatar.php?img=2';
     else 
-        window.location.href='../profilo/avatar/avatar3.php';
+        window.location.href='../profilo/avatar/avatar.php?img=3';
 }
 

@@ -118,6 +118,7 @@ session_start();
     $_SESSION['locandina'] = $array1['locandina'];
     $_SESSION['trailer'] = $array1['trailer'];
     $_SESSION['disponibile'] = $array1['disponibile'];
+    $_SESSION['star'] = $array1['star'];
 
     $_SESSION['posti1500'] = $array2['posti1500'];
     $_SESSION['posti1730'] = $array2['posti1730'];
@@ -144,17 +145,45 @@ session_start();
       </div>
 
       <div class="locandine">
-        <div class="rating">
-          <input type="radio" name="rating" value="5" id="5">
-          <label for="5">☆</label>
-          <input type="radio" name="rating" value="4" id="4">
-          <label for="4">☆</label>
-          <input type="radio" name="rating" value="3" id="3">
-          <label for="3">☆</label>
-          <input type="radio" name="rating" value="2" id="2">
-          <label for="2">☆</label>
-          <input type="radio" name="rating" value="1" id="1">
-          <label for="1">☆</label>
+        <div class="star">
+          <?php 
+            $star=$_SESSION['star'];
+            if($star==1){
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+            }
+            else if($star==2){
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+            }
+            else if($star==3){
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+            }
+            else if($star==4){
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star_vuota.png' width='30px' height='30px' ></i>");
+            }
+            else{
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+              echo("<i class='icons'><img src='../image/icone/star.png' width='30px' height='30px' ></i>");
+            }
+          ?>
         </div>
         <div class="img">
           <img src="  <?php echo ($_SESSION['locandina']) ?> " alt="" width="100%" height="100%">
