@@ -160,18 +160,6 @@
     border: none;
 }
 
-.input{
-    background-color: rgba(217, 217, 217, 0.916);
-    border: solid 1px black;
-    border-radius: 0.4em;
-    padding-left: 10px;
-    padding-right: 10px;
-    outline: none;
-}
-
-.input:focus{
-    outline: solid 3px rgb(156, 101, 0);
-}
 /*LOGIN E REGISTRAZIONE*/
 
 

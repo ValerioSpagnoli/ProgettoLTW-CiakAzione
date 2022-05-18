@@ -1,32 +1,52 @@
-function validaRegistrazione(){
 
-    //test cognome con lettera maiuscola
-
-    var cognome = document.registrazione.cognome.value;
-    console.log(cognome);
-    var test = null
-    for(var i=0; i<cognome.length; i++){
-        test= cognome.charAt(i);
-        console.log(test);
-        if(!isNaN(test) && test!=' '){
-            alert("Inserire solo caratteri alfabetici nel cognome");
-            return false;
-        }
-
-    }
-
+function validaNome(){
     var nome = document.registrazione.nome.value;
-    console.log(nome);
-    test = null
-    for(var i=0; i<nome.length; i++){
-        test= nome.charAt(i);
-        console.log(test);
-        if(!isNaN(test)){
-            alert("Inserire solo caratteri alfabetici nel nome");
-            return false;
-        }
+    document.registrazione.nome.value = nome[0].toUpperCase()+nome.slice(1);
+    if(! /^[a-zA-Z]+$/.test(nome)){
+        document.registrazione.nome.style.borderColor = "red";
+        return;
     }
+    document.registrazione.nome.style.borderColor = "rgb(32, 150, 8)";
 }
+
+function validaCognome(){
+    var cognome = document.registrazione.cognome.value;
+    document.registrazione.cognome.value = cognome[0].toUpperCase()+cognome.slice(1);
+    if(! /^[a-zA-Z]+$/.test(cognome)){
+        document.registrazione.cognome.style.borderColor = "red";
+        return;
+    }
+    document.registrazione.cognome.style.borderColor = "rgb(32, 150, 8)";
+}
+
+function validaEmail(){
+    var email=document.registrazione.email.value;
+    if (! /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+        document.registrazione.email.style.borderColor = "red";
+        return;
+    }
+    document.registrazione.email.style.borderColor = "rgb(32, 150, 8)";
+}
+
+function validaData(){
+    document.registrazione.datanascita.style.borderColor = "rgb(32, 150, 8)";
+}
+
+function validaPassword(){
+    if(document.registrazione.password.value.length < 8){
+        document.registrazione.password.style.borderColor = "red";
+    }
+    document.registrazione.password.style.borderColor = "rgb(32, 150, 8)";
+}
+
+function validaConfermaPassword(){
+    if(document.registrazione.confermapassword.value.length < 8){
+        document.registrazione.confermapassword.style.borderColor = "red";
+    }
+    document.registrazione.confermapassword.style.borderColor = "rgb(32, 150, 8)";
+}
+
+
 
 function cambiaAvatar(foto){
     if(foto=="../../image/avatar/donna.jpg")

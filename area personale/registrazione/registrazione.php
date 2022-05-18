@@ -100,7 +100,7 @@ session_start();
 
     <div class="form">
 
-      <form action="../php/validateRegistration.php" method="POST" name="registrazione" onSubmit="validaRegistrazione()">
+      <form action="../php/validateRegistration.php" method="POST" name="registrazione">
 
         <table>
           <tr>
@@ -130,7 +130,7 @@ session_start();
             <td>Nome:</td>
           </tr>
           <tr>
-            <td><input name="nome" style="width: 100%;" class="input" type="text" maxlength="50" required></td>
+            <td><input name="nome" style="width: 100%;" class="input" type="text" maxlength="50" required onchange="validaNome()"></td>
           </tr>
 
           <tr>
@@ -141,7 +141,7 @@ session_start();
             <td>Cognome:</td>
           </tr>
           <tr>
-            <td><input name="cognome" style="width: 100%;" class="input" type="text" maxlength="50" required></td>
+            <td><input name="cognome" style="width: 100%;" class="input" type="text" maxlength="50" required onchange="validaCognome()"></td>
           </tr>
 
           <tr>
@@ -152,7 +152,7 @@ session_start();
             <td>Data di Nascita:</td>
           </tr>
           <tr>
-            <td><input name="datanascita" style="width: 100%;" class="input" type="date" required></td>
+            <td><input name="datanascita" style="width: 100%;" class="input" type="date" required onchange="validaData()"></td>
           </tr>
 
           <tr>
@@ -163,7 +163,7 @@ session_start();
             <td>Email:</td>
           </tr>
           <tr>
-            <td><input name="email" style="width: 100%;" class="input" type="email" required></td>
+            <td><input name="email" style="width: 100%;" class="input" type="email" required onchange="validaEmail()"></td>
           </tr>
 
           <tr>
@@ -174,7 +174,7 @@ session_start();
             <td>Password:</td>
           </tr>
           <tr>
-            <td><input name="password" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required></td>
+            <td><input name="password" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required onchange="validaPassword()"></td>
           </tr>
 
           <tr>
@@ -185,7 +185,7 @@ session_start();
             <td>Conferma Password:</td>
           </tr>
           <tr>
-            <td><input name="confermapassword" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required></td>
+            <td><input name="confermapassword" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required onchange="validaConfermaPassword()"></td>
           </tr>
 
           <tr>
@@ -240,7 +240,7 @@ session_start();
 
 
 
-
+  <script src="jquery-3.6.0.min.js"></script>
   <script src="../js/script.js"></script>
 
 
