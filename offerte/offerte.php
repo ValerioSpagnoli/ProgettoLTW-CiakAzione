@@ -25,7 +25,7 @@
 </head>
 
 
-<body class="body">
+<body class="body" onload="leggiCookie();">
 
   <!-- NAVBAR -->
   <div class="grid-item-navbar">
@@ -183,7 +183,7 @@
               </td></tr>
 
               <tr><td style="display: flex; justify-content:center; margin:10px;">
-                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaAbbonamento">
+                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaAbbonamento" onclick="leggiCookie()">
                   Prenota abbonamento
                 </button>
 
@@ -197,7 +197,7 @@
                       <div class="modal-body">
                         Seleziona il cinema dove vuoi ritirare l'abbonamento:
                         <br>
-                        <select id="sceltaAbbonamento" name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
+                        <select id="sceltaAbbonamento" name="sceltaAbbonamento" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
                           <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
                           <option value="Latina">Ciak & Azione Latina</option>
                           <option value="Cerveteri">Ciak & Azione Cerveteri</option>
@@ -243,7 +243,7 @@
               </td></tr>
 
               <tr><td style="display: flex; justify-content:center; margin:10px">
-                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaCiakCard">
+                <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalConfermaCiakCard" onclick="leggiCookie()">
                   Prenota Ciak Card
                 </button>
 
@@ -257,7 +257,7 @@
                       <div class="modal-body">
                       Seleziona il cinema dove vuoi ritirare la Ciak Card:
                         <br>
-                        <select id="sceltaCiakCard" name="scelta" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
+                        <select id="sceltaCiakCard" name="sceltaCiakCard" required style="width: 100%; height: 100%; background-color: rgba(217, 217, 217, 0.916); border-radius: 15px; text-align: center;">
                           <option value="SanLorenzo">Ciak & Azione San Lorenzo, Roma</option>
                           <option value="Latina">Ciak & Azione Latina</option>
                           <option value="Cerveteri">Ciak & Azione Cerveteri</option>
