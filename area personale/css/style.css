@@ -39,12 +39,20 @@
     padding-left: 10px;
     padding-right: 10px;
     outline: none;
+    font-size: 18px;
 }
 
 .input:focus{
     outline: none;
     border: solid 2px rgb(156, 101, 0);
     border-radius: 0.4em;
+}
+
+.errore{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 15px;
 }
 /*LOGIN*/
 

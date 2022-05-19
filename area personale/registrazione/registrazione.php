@@ -116,10 +116,10 @@ session_start();
               <?php
               if (isset($_GET['errore'])) {
                 if ($_GET['errore'] == 1) {
-                  echo ('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email già in uso. </div>');
+                  echo ('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Email già in uso </div>');
                 }
                 if ($_GET['errore'] == 2) {
-                  echo ('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> I due campi password e conferma password non coincidono. </div>');
+                  echo ('<div style="display:flex; justify-content:center; color: red; font-size: 20px;"> Le password non coincidono </div>');
                 }
               }
               ?>
@@ -132,10 +132,10 @@ session_start();
           <tr>
             <td><input name="nome" style="width: 100%;" class="input" type="text" maxlength="50" required onchange="validaNome()"></td>
           </tr>
-
           <tr>
-            <td><br></td>
+            <td style="height: auto;"><input name="erroreNome" style="width: 100%;" class="errore" type="text" readonly></td>
           </tr>
+
 
           <tr>
             <td>Cognome:</td>
@@ -143,10 +143,10 @@ session_start();
           <tr>
             <td><input name="cognome" style="width: 100%;" class="input" type="text" maxlength="50" required onchange="validaCognome()"></td>
           </tr>
-
           <tr>
-            <td><br></td>
+            <td style="height: auto;"><input name="erroreCognome" style="width: 100%;" class="errore" type="text" readonly></td>
           </tr>
+
 
           <tr>
             <td>Data di Nascita:</td>
@@ -154,10 +154,10 @@ session_start();
           <tr>
             <td><input name="datanascita" style="width: 100%;" class="input" type="date" required onchange="validaData()"></td>
           </tr>
-
           <tr>
-            <td><br></td>
+            <td style="height: auto;"><input name="erroreData" style="width: 100%;" class="errore" type="text" readonly></td>
           </tr>
+
 
           <tr>
             <td>Email:</td>
@@ -165,10 +165,10 @@ session_start();
           <tr>
             <td><input name="email" style="width: 100%;" class="input" type="email" required onchange="validaEmail()"></td>
           </tr>
-
           <tr>
-            <td><br></td>
+            <td style="height: auto;"><input name="erroreEmail" style="width: 100%;" class="errore" type="text" readonly></td>
           </tr>
+
 
           <tr>
             <td>Password:</td>
@@ -176,10 +176,10 @@ session_start();
           <tr>
             <td><input name="password" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required onchange="validaPassword()"></td>
           </tr>
-
           <tr>
-            <td><br></td>
+            <td style="height: auto;"><input name="errorePassword" style="width: 100%;" class="errore" type="text" readonly></td>
           </tr>
+
 
           <tr>
             <td>Conferma Password:</td>
@@ -187,18 +187,25 @@ session_start();
           <tr>
             <td><input name="confermapassword" style="width: 100%;" class="input" type="password" autocomplete="on" minlength="8" required onchange="validaConfermaPassword()"></td>
           </tr>
+          <tr>
+            <td style="height: auto;"><input name="erroreConfermaPassword" style="width: 100%;" class="errore" type="text" readonly></td>
+          </tr>
+
 
           <tr>
             <td><br></td>
           </tr>
+
 
           <tr>
             <td style="display: flex; justify-content: center;"><button class="btn-form" name="registrationButton">Registrati</button></td>
           </tr>
 
+
           <tr>
             <td><br></td>
           </tr>
+
 
           <tr>
             <td style="display: flex; justify-content: center;">Sei già registrato? Clicca &nbsp <a href="../login/login.php" style="color: rgb(156, 101, 0);">qui</a>!</td>
@@ -240,7 +247,6 @@ session_start();
 
 
 
-  <script src="jquery-3.6.0.min.js"></script>
   <script src="../js/script.js"></script>
 
 
