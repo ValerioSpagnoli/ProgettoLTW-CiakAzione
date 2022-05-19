@@ -108,6 +108,7 @@
     font-family: 'Vollkorn', serif;
     font-size: 50px;
     padding-left: 5%;
+    width: 100%;
 }
 
 .chi-siamo{
@@ -117,5 +118,28 @@
         'b c' auto / 1fr 1fr;
     width: 100%;
     height: 100%;
+    justify-items: center;
+}
+
+.storia{
+    grid-area: b;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    margin: 4%;
+    padding: 4%;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px;
+    width: 559px;
+}
+
+.contatti{
+    grid-area: c;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    margin: 4%;
+    padding: 4%;
+    background-color: rgba(155, 155, 155, 0.651);
+    border-radius: 15px;
+    width: 559px;
 }
 /*Sezione chi-siamo*/

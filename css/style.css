@@ -87,6 +87,7 @@
     padding: 4%;
     background-color: rgba(155, 155, 155, 0.651);
     border-radius: 15px;
+    max-width: 559px;
 }
 
 .contatti{
@@ -97,5 +98,6 @@
     padding: 4%;
     background-color: rgba(155, 155, 155, 0.651);
     border-radius: 15px;
+    max-width: 559px;
 }
 /*Sezione contatti*/
