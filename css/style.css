@@ -51,6 +51,30 @@
     border-radius: 15px;
     justify-content: center;
 }
+
+
+@media screen and (min-width: 1500px) {
+    .btn-offerta1{
+        grid-area: b;
+        display: flex;
+        margin: 4%;
+        margin-right: 100px;
+        border-radius: 15px;
+        justify-content: end;
+    }
+    
+    .btn-offerta2{
+        grid-area: c;
+        display: flex;
+        margin: 4%;
+        margin-left: 100px;
+        border-radius: 15px;
+        justify-content: start;
+    }
+}
+
+
+
 /*Sezione offerte*/
 
 
