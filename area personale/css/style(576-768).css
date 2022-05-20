@@ -105,7 +105,7 @@
 }
 
 .tit-abbonamenti{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: solid 2px black;
     border-top-left-radius: 15px;
@@ -115,12 +115,12 @@
 }
 
 .sezione-abbonamenti{
-    font-size: 14px;
+    font-size: 17px;
     padding: 10px;
 }
 
 .tit-prenotazioni{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: solid 2px black;
     border-top-left-radius: 15px;
@@ -129,8 +129,26 @@
     background-color: rgba(122, 122, 122, 0.763);
 }
 .sezione-prenotazioni{
-    font-size: 14px;
+    font-size: 17px;
     padding: 10px;
+}
+
+
+.modal-dettagli{
+    display: grid;
+    grid-template: 
+    'a b';
+}
+
+.locandina-dettagli{
+    grid-area: a;
+    margin: 10px;
+}
+
+.testo-dettagli{
+    grid-area: b;
+    margin: 10px;
+    font-size: 15px;
 }
 /* PROFILO */
 

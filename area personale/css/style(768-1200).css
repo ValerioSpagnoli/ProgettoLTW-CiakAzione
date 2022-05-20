@@ -113,7 +113,7 @@
     background-color: rgba(122, 122, 122, 0.763);
 }
 .sezione-abbonamenti{
-    font-size: 15px;
+    font-size: 19px;
     padding: 10px;
 }
 
@@ -127,10 +127,27 @@
     background-color: rgba(122, 122, 122, 0.763);
 }
 .sezione-prenotazioni{
-    font-size: 15px;
+    font-size: 19px;
     padding: 10px;
 }
 
+
+.modal-dettagli{
+    display: grid;
+    grid-template: 
+    'a b';
+}
+
+.locandina-dettagli{
+    grid-area: a;
+    margin: 10px;
+}
+
+.testo-dettagli{
+    grid-area: b;
+    margin: 10px;
+    font-size: 15px;
+}
 /* PROFILO */
 
 /* LOGIN E REGISTRAZIONE */

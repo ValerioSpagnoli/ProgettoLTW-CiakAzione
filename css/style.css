@@ -52,29 +52,6 @@
     justify-content: center;
 }
 
-
-@media screen and (min-width: 1500px) {
-    .btn-offerta1{
-        grid-area: b;
-        display: flex;
-        margin: 4%;
-        margin-right: 100px;
-        border-radius: 15px;
-        justify-content: end;
-    }
-    
-    .btn-offerta2{
-        grid-area: c;
-        display: flex;
-        margin: 4%;
-        margin-left: 100px;
-        border-radius: 15px;
-        justify-content: start;
-    }
-}
-
-
-
 /*Sezione offerte*/
 
 
@@ -87,7 +64,6 @@
     padding: 4%;
     background-color: rgba(155, 155, 155, 0.651);
     border-radius: 15px;
-    max-width: 559px;
 }
 
 .contatti{
@@ -98,6 +74,5 @@
     padding: 4%;
     background-color: rgba(155, 155, 155, 0.651);
     border-radius: 15px;
-    max-width: 559px;
 }
 /*Sezione contatti*/

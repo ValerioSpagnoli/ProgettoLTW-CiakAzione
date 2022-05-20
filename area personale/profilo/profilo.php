@@ -240,7 +240,8 @@ session_start();
                 $cinema = $line['cinemaritiro'];
                 $card = $line['card'];
 
-                $prenotazione = "N°: " . $id . "  -  " . $card . "  -  Intestatario: " . $nome . " " . $cognome . "  -  Cinema selezionato per il ritiro: Ciak & Azione " . $cinema;
+                // $prenotazione = "N°: " . $id . "  -  " . $card . "  -  Intestatario: " . $nome . " " . $cognome . "  -  Cinema selezionato per il ritiro: Ciak & Azione " . $cinema;
+                $prenotazione = "Prenotazione: " . $card;
 
                 echo ("<div class='riga-prenotazioni'>");
 
@@ -249,7 +250,11 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma'); echo($id); echo('">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalDettagliCard'); echo($id); echo('">');
+                      echo("<img src='../../image/icone/dettagli.png' width='32px' height='32px'>");
+                    echo("</button>");
+
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConfermaCard'); echo($id); echo('">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -258,7 +263,26 @@ session_start();
 
                 echo ("<hr>");
 
-                echo('<div class="modal fade" id="modalConferma'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalDettagliCard'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                  echo('<div class="modal-dialog">');
+                    echo('<div class="modal-content">');
+                      echo('<div class="modal-header">');
+                        echo('<h5 class="modal-title" id="exampleModalLabel"> Dettagli prenotazione </h5>');
+                          echo('<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>');
+                      echo('</div>');
+                      echo('<div class="modal-body">');
+                          echo("<div class='testo-dettagli'>");
+                          echo('Id: ' . $id . '<br>');
+                          echo('Card: ' . $card . '<br>');
+                          echo('Intestatario: ' . $nome . " " . $cognome . '<br>');
+                          echo('Cinema selezionato per il ritiro: Ciak & Azione ' . $cinema . '<br>');
+                          echo('</div>');   
+                      echo('</div>');
+                    echo('</div>');
+                  echo('</div>');
+                echo('</div>');
+
+                echo('<div class="modal fade" id="modalConfermaCard'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');
@@ -278,7 +302,9 @@ session_start();
               }
             }
             ?>
-            <b> * Presenta il numero della prenotazione al cinema selezionato per acquistare la tua card! </b>
+
+            <div style="font-size: 15px; font-weight: bold;"> * Presenta il numero della prenotazione al cinema selezionato per acquistare la tua card! </div>
+          
           </div>
         </div>
 
@@ -308,7 +334,14 @@ session_start();
                 $sala = $line['sala'];
                 $postiprenotati = $line['postiprenotati'];
 
-                $prenotazione = "N°: " . $id . "  -  " . $titolo . "  -  Cinema: Ciak&Azione " . $cinema . "  -  Orario: " . $orario . "  -  Sala: " . $sala . "  -  Numero Biglietti: " . $postiprenotati;
+                $query2 = "SELECT locandina FROM film WHERE titolo='$titolo'";
+                $result2 = pg_query($query2) or die(pg_last_error());
+                $line2 = pg_fetch_array($result2, null, PGSQL_ASSOC);
+                $locandina = $line2['locandina'];
+
+                // $prenotazione = "N°: " . $id . "  -  " . $titolo . "  -  Cinema: Ciak&Azione " . $cinema . "  -  Orario: " . $orario . "  -  Sala: " . $sala . "  -  Numero Biglietti: " . $postiprenotati;
+                $prenotazione = "Prenotazione: " . $titolo;
+                
 
 
                 echo ("<div class='riga-prenotazioni'>");
@@ -318,7 +351,11 @@ session_start();
                   echo ("</div>");
 
                   echo ("<div class='btn-prenotazione'>");
-                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConferma'); echo($id); echo('">');
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalDettagliFilm'); echo($id); echo('">');
+                      echo("<img src='../../image/icone/dettagli.png' width='32px' height='32px'>");
+                    echo("</button>");
+
+                    echo ('<button style="background: none; border:none" data-bs-toggle="modal" data-bs-target="#modalConfermaFilm'); echo($id); echo('">');
                       echo("<img src='../../image/icone/cestino.png' width='32px' height='32px'>");
                     echo("</button>");
                   echo ("</div>");
@@ -328,7 +365,32 @@ session_start();
                 echo ("<hr>");
 
 
-                echo('<div class="modal fade" id="modalConferma'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                echo('<div class="modal fade" id="modalDettagliFilm'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
+                  echo('<div class="modal-dialog">');
+                    echo('<div class="modal-content">');
+                      echo('<div class="modal-header">');
+                        echo('<h5 class="modal-title" id="exampleModalLabel"> Dettagli prenotazione </h5>');
+                          echo('<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>');
+                      echo('</div>');
+                      echo('<div class="modal-body">');
+                        echo('<div class="modal-dettagli">');
+                          echo("<div class='locandina-dettagli'><img src='../" . $locandina . "'width='167px' height='250px'></div>");
+                          echo("<div class='testo-dettagli'>");
+                          echo('Id prenotazione: ' . $id . '<br>');
+                          echo('Titolo: ' . $titolo . '<br>');
+                          echo('Cinema: Ciak & Azione ' . $cinema . '<br>');
+                          echo('Orario: ' . $orario . '<br>');
+                          echo('Sala: ' . $sala . '<br>');
+                          echo('Numero biglietti: ' . $postiprenotati . '<br>');
+                          echo('</div>');
+                        echo('</div>');
+                      echo('</div>');
+                    echo('</div>');
+                  echo('</div>');
+                echo('</div>');
+
+
+                echo('<div class="modal fade" id="modalConfermaFilm'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
                       echo('<div class="modal-header">');
@@ -350,8 +412,8 @@ session_start();
             }
             ?>
 
-            <b> * Presenta il numero della prenotazione al cinema per acquistare i biglietti! </b>
-
+            <div style="font-size: 15px; font-weight: bold;"> * Presenta il numero della prenotazione al cinema per acquistare i biglietti! </div>
+      
           </div>
         </div>
 
