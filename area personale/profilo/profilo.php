@@ -92,7 +92,9 @@ session_start();
   <div class="grid-item">
 
     <div class="profilo">
-
+      
+      <!-- NOME, FOTO E DATI -->
+      
       <div class="nome">
         Bentornato <?php echo ($_SESSION['nome']); ?>
       </div>
@@ -214,8 +216,15 @@ session_start();
         Email: <?php echo ($_SESSION['email']); ?> 
       </div>
 
-      <div class="azioni">
 
+
+
+
+      
+      <div class="azioni">
+        
+        <!-- ABBONAMENTI E CARD -->
+        
         <div class="abbonamenti">
           <div class="tit-abbonamenti">
             Abbonamenti
@@ -240,8 +249,7 @@ session_start();
                 $cinema = $line['cinemaritiro'];
                 $card = $line['card'];
 
-                // $prenotazione = "N°: " . $id . "  -  " . $card . "  -  Intestatario: " . $nome . " " . $cognome . "  -  Cinema selezionato per il ritiro: Ciak & Azione " . $cinema;
-                $prenotazione = "Prenotazione: " . $card;
+                $prenotazione = "Prenotazione " . $id . ": " . $card;
 
                 echo ("<div class='riga-prenotazioni'>");
 
@@ -308,6 +316,14 @@ session_start();
           </div>
         </div>
 
+
+
+
+
+
+
+        <!-- PRENOTAZIONI -->
+
         <div class="prenotazioni">
           <div class="tit-prenotazioni">
             Prenotazioni
@@ -339,11 +355,8 @@ session_start();
                 $line2 = pg_fetch_array($result2, null, PGSQL_ASSOC);
                 $locandina = $line2['locandina'];
 
-                // $prenotazione = "N°: " . $id . "  -  " . $titolo . "  -  Cinema: Ciak&Azione " . $cinema . "  -  Orario: " . $orario . "  -  Sala: " . $sala . "  -  Numero Biglietti: " . $postiprenotati;
-                $prenotazione = "Prenotazione: " . $titolo;
+                $prenotazione = "Prenotazione " . $id . ": " . $titolo;
                 
-
-
                 echo ("<div class='riga-prenotazioni'>");
 
                   echo ("<div class='testo-prenotazione'>");
@@ -423,6 +436,10 @@ session_start();
     </div>
 
   </div>
+
+
+
+
 
 
   <!-- FOOTER -->
