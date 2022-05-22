@@ -42,6 +42,8 @@ function scriviCookie(){
 
 
 function confermaPrenotazione(){
+
+    //set del cookie postiDisponibii
     nomeCookie = "postiDisponibili";
 	if (document.cookie.length > 0){
 		var inizio = document.cookie.indexOf(nomeCookie + "=");
@@ -51,25 +53,25 @@ function confermaPrenotazione(){
 		    var fine = document.cookie.indexOf(";",inizio);
 		    if (fine == -1) fine = document.cookie.length;
 		    postiDisponibili = document.cookie.substring(inizio,fine);
-            console.log("PrenotazioneLog->confermaPrenotazione: postiDisponibili = " + postiDisponibili)
+            console.log("Prenotazione->confermaPrenotazione: postiDisponibili = " + postiDisponibili)
         }
     }
 
 
     var x = document.getElementById("sceltaBiglietti");
     var indice = x.selectedIndex;
-
     var valoreSelezionato = x.options[indice];
-    var valoreOpzione = valoreSelezionato.value;
-    console.log("valOp" + valoreOpzione);
+    var postiSelezionati = valoreSelezionato.value;
+    console.log("Prenotazione->confermaPrenotazione->postiSelezionati = " + postiSelezionati);
 
-    var postiRimanenti = postiDisponibili-valoreOpzione;
-    console.log("postiRim" + postiRimanenti);
+    var postiRimanenti = postiDisponibili-postiSelezionati;
+    console.log("Prenotazione->confermaPrenotazione->postiRimanenti = " + postiRimanenti);
+
     var scadenza = new Date();
     var adesso = new Date();
     scadenza.setTime(adesso.getTime() + (parseInt(1) * 86400000));
     document.cookie = "postiRimanenti=" + postiRimanenti + '; expires=' + scadenza.toGMTString() + '; path=/';
-    document.cookie = "postiSelezionati=" + valoreOpzione + '; expires=' + scadenza.toGMTString() + '; path=/';
+    document.cookie = "postiSelezionati=" + postiSelezionati + '; expires=' + scadenza.toGMTString() + '; path=/';
 }
 
 

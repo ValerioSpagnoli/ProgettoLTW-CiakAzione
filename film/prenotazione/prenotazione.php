@@ -29,13 +29,17 @@ session_start();
 
     <?php
     $_SESSION['orario'] = $_GET['orario'];
+
     if ($_SESSION['orario'] == '15:00') {
         setcookie('postiDisponibili', $_SESSION['posti1500'], strtotime("+1 day"));
-    } else if ($_SESSION['orario'] == '17:30') {
+    } 
+    else if ($_SESSION['orario'] == '17:30') {
         setcookie("postiDisponibili", $_SESSION['posti1730'], strtotime("+1 day"));
-    } else if ($_SESSION['orario'] == '20:00') {
+    } 
+    else if ($_SESSION['orario'] == '20:00') {
         setcookie("postiDisponibili", $_SESSION['posti2000'], strtotime("+1 day"));
-    } else if ($_SESSION['orario'] == '22:30') {
+    } 
+    else if ($_SESSION['orario'] == '22:30') {
         setcookie("postiDisponibili", $_SESSION['posti2230'], strtotime("+1 day"));
     }
 
@@ -96,83 +100,98 @@ session_start();
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4'>4</option>");
-                                    } else if ($_SESSION['posti1500'] > 2) {
+                                    } 
+                                    else if ($_SESSION['posti1500'] > 2) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti1500'] > 1) {
+                                    } 
+                                    else if ($_SESSION['posti1500'] > 1) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti1500'] > 0) {
+                                    } 
+                                    else if ($_SESSION['posti1500'] > 0) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2' disabled>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
                                     }
-                                } else if ($_SESSION['orario'] == '17:30') {
+                                } 
+                                else if ($_SESSION['orario'] == '17:30') {
                                     if ($_SESSION['posti1730'] > 3) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4'>4</option>");
-                                    } else if ($_SESSION['posti1730'] > 2) {
+                                    } 
+                                    else if ($_SESSION['posti1730'] > 2) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti1730'] > 1) {
+                                    } 
+                                    else if ($_SESSION['posti1730'] > 1) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti1730'] > 0) {
+                                    } 
+                                    else if ($_SESSION['posti1730'] > 0) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2' disabled>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
                                     }
-                                } else if ($_SESSION['orario'] == '20:00') {
+                                } 
+                                else if ($_SESSION['orario'] == '20:00') {
                                     if ($_SESSION['posti2000'] > 3) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4'>4</option>");
-                                    } else if ($_SESSION['posti2000'] > 2) {
+                                    } 
+                                    else if ($_SESSION['posti2000'] > 2) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti2000'] > 1) {
+                                    } 
+                                    else if ($_SESSION['posti2000'] > 1) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti2000'] > 0) {
+                                    } 
+                                    else if ($_SESSION['posti2000'] > 0) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2' disabled>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
                                     }
-                                } else if ($_SESSION['orario'] == '22:30') {
+                                } 
+                                else if ($_SESSION['orario'] == '22:30') {
                                     if ($_SESSION['posti2230'] > 3) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4'>4</option>");
-                                    } else if ($_SESSION['posti2230'] > 2) {
+                                    } 
+                                    else if ($_SESSION['posti2230'] > 2) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3'>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti2230'] > 1) {
+                                    } 
+                                    else if ($_SESSION['posti2230'] > 1) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2'>2</option>");
                                         echo ("<option value='3' disabled>3</option>");
                                         echo ("<option value='4' disabled>4</option>");
-                                    } else if ($_SESSION['posti2230'] > 0) {
+                                    } 
+                                    else if ($_SESSION['posti2230'] > 0) {
                                         echo ("<option value='1' selected>1</option>");
                                         echo ("<option value='2' disabled>2</option>");
                                         echo ("<option value='3' disabled>3</option>");

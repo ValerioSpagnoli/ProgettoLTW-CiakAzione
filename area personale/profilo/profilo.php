@@ -336,13 +336,15 @@ session_start();
 
 
             if ($dbconn) {
+
+              //query sulla tabella prenotazioni per prendere le informazioni
               $email = $_SESSION['email'];
               $query1 = "SELECT * FROM prenotazioni WHERE email='$email'";
-
-
               $result1 = pg_query($query1) or die(pg_last_error());
 
               while ($line = pg_fetch_array($result1, null, PGSQL_ASSOC)) {
+
+                //dettagli della prenotazione
                 $id = $line['idprenotazione'];
                 $titolo = $line['titolo'];
                 $orario = $line['orario'];
@@ -350,13 +352,15 @@ session_start();
                 $sala = $line['sala'];
                 $postiprenotati = $line['postiprenotati'];
 
+                //query per prendere la locandina del film della prenotazione
                 $query2 = "SELECT locandina FROM film WHERE titolo='$titolo'";
                 $result2 = pg_query($query2) or die(pg_last_error());
                 $line2 = pg_fetch_array($result2, null, PGSQL_ASSOC);
                 $locandina = $line2['locandina'];
 
                 $prenotazione = "Prenotazione " . $id . ": " . $titolo;
-                
+              
+                //sezione di codice html che va a formare le righe delle prenotazioni
                 echo ("<div class='riga-prenotazioni'>");
 
                   echo ("<div class='testo-prenotazione'>");
@@ -378,6 +382,7 @@ session_start();
                 echo ("<hr>");
 
 
+                //modal dettagli film
                 echo('<div class="modal fade" id="modalDettagliFilm'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
@@ -403,6 +408,7 @@ session_start();
                 echo('</div>');
 
 
+                //modal conferma cancellazione film
                 echo('<div class="modal fade" id="modalConfermaFilm'); echo($id); echo('" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">');
                   echo('<div class="modal-dialog">');
                     echo('<div class="modal-content">');
